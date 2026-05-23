@@ -585,7 +585,7 @@
       "__version": 2,
       "Flags": 0,
       "Name": "ChairLockZone",
-      "Position": "54.1828651,171.360687,16",
+      "Position": "54.1828651,174.867905,16",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "",
@@ -699,11 +699,11 @@
       "Scale": "0.0199999996,0.0199999996,0.0199999996",
       "Tags": "",
       "Enabled": true,
-      "NetworkMode": 2,
+      "NetworkMode": 1,
       "NetworkFlags": 0,
       "NetworkOrphaned": 0,
       "NetworkTransmit": true,
-      "OwnerTransfer": 1,
+      "OwnerTransfer": 0,
       "Components": [
         {
           "__type": "Sandbox.ModelRenderer",
@@ -716,7 +716,7 @@
           "MaterialGroup": null,
           "MaterialOverride": null,
           "Materials": null,
-          "Model": "models/monitor.vmdl",
+          "Model": "models/basic-monitor/monitor.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -731,6 +731,32 @@
           },
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "2a4cd790-128a-4016-8c57-671581e4ad40",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "1000,-1575,0",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "2000,2000,2000",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
         }
       ],
       "Children": [
@@ -744,7 +770,7 @@
           "Scale": "50,50,50",
           "Tags": "",
           "Enabled": true,
-          "NetworkMode": 1,
+          "NetworkMode": 2,
           "NetworkFlags": 0,
           "NetworkOrphaned": 0,
           "NetworkTransmit": true,
@@ -775,9 +801,21 @@
               "VerticalAlign": "Center"
             },
             {
-              "__type": "ScreenDisplayPanel",
-              "__guid": "c926c0c7-1f0f-4db9-b161-004111b46ce5",
+              "__type": "Sandbox.Screen.MonitorPanel",
+              "__guid": "95d526ef-3871-45ba-a2ae-0f62438b1949",
               "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            },
+            {
+              "__type": "Sandbox.Screen.ScreenDisplayPanel",
+              "__guid": "821265cd-e3b8-4272-b569-f29b7e2560a2",
+              "__enabled": false,
               "Flags": 0,
               "ConnectionUri": "ws://localhost:8080",
               "OnComponentDestroy": null,
@@ -788,6 +826,24 @@
               "OnComponentUpdate": null
             }
           ],
+          "Children": []
+        },
+        {
+          "__guid": "f8ae25f7-9e12-4faa-8a2e-339420c8ad3b",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Target",
+          "Position": "0,-1569.60229,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
           "Children": []
         }
       ]
@@ -813,14 +869,14 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.SelectionSetsSystem": {
-        "Data": {
-          "SelectionSets": []
-        }
-      },
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
           "$blob": "ceabec0a-1f73-4ea6-969e-d45c2c157f58"
+        }
+      },
+      "Sandbox.SelectionSetsSystem": {
+        "Data": {
+          "SelectionSets": []
         }
       }
     }

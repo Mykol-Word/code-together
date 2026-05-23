@@ -5,7 +5,7 @@
   "Ident": "code_together",
   "Schema": 1,
   "IncludeSourceFiles": false,
-  "Resources": null,
+  "Resources": "Assets/vga.ttf",
   "PackageReferences": [],
   "EditorReferences": null,
   "Mounts": null,

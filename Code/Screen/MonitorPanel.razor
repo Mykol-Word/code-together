@@ -1,0 +1,49 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	@if ( !_claimed )
+	{
+		<div class="view" onclick="@Claim">
+			<label class="btn">claim computer</label>
+		</div>
+	}
+	else
+	{
+		<div class="view">
+			<label class="btn" onclick="@StreamScreen">stream screen</label>
+			<label class="btn" onclick="@SetScreen">set screen</label>
+			<label class="btn danger" onclick="@Unclaim">unclaim</label>
+		</div>
+	}
+</root>
+
+@code
+{
+	[Sync] private bool _claimed {get; set;}
+
+	void Claim()
+	{
+		GameObject.Network.TakeOwnership();
+		_claimed = true;
+	}
+
+	void Unclaim()
+	{
+		_claimed = false;
+		GameObject.Network.DropOwnership();
+	}
+	[Rpc.Broadcast]
+	void StreamScreen()
+	{
+		GetComponent<ScreenDisplayPanel>( true ).Enabled = true;
+		Enabled = false;
+	}
+	void SetScreen()
+	{
+
+	}
+
+	protected override int BuildHash() => System.HashCode.Combine( _claimed );
+}

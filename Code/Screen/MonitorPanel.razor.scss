@@ -1,0 +1,40 @@
+.view {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	pointer-events: all;
+	font-family: Perfect DOS VGA 437;
+	font-size: 18px;
+	font-smooth: never;
+	background-color: #000000;
+	pointer-events: all;
+}
+
+label {
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	pointer-events: all;
+	padding: 10px 24px;
+	border: 2px solid white;
+	border-radius: 1px;
+	background-color: #000000;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.15);
+	}
+}
+
+.btn {
+	padding: 7px 16px;
+	width: 180px;
+	text-align: center;
+}
+
+.danger {
+	color: #ff4444;
+	border-color: #ff4444;
+}

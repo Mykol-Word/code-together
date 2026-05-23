@@ -1,0 +1,37 @@
+.screen {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: #000000;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	font-family: Perfect DOS VGA 437;
+	font-smooth: never;
+}
+
+.stop-btn {
+	position: absolute;
+	bottom: 6px;
+	left: 6px;
+	color: rgb(255, 255, 255);
+	font-size: 10px;
+	cursor: pointer;
+	pointer-events: all;
+	padding: 5px 8px 1px 10px;
+	border: 2px solid white;
+	background-color: #000000a9;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.15);
+	}
+}
+
+.no-stream {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 255, 255);
+	font-size: 18px;
+}

@@ -18,12 +18,39 @@ public sealed class ChairLockZone : Component, Component.ITriggerListener
 			_chair = chair;
 	}
 
-	// release when it exits
+	// release and reset state when it exits
 	public void OnTriggerExit( Collider other )
 	{
 		var chair = other.GameObject.GetComponentInParent<ChairController>();
-		if ( chair == _chair )
-			_chair = null;
+		if ( chair != _chair ) return;
+
+		if ( !chair.IsProxy )
+		{
+			Mouse.Visible = false;
+			var cam_lock = GetCamLock();
+			if ( cam_lock.IsValid() )
+				cam_lock.IsLocked = false;
+		}
+		_chair = null;
+	}
+
+	// sets mouse visibility and locks camera to chair forward when at target angle
+	protected override void OnUpdate()
+	{
+		if ( !_chair.IsValid() || _chair.IsProxy ) return;
+
+		var chair_yaw = _chair.WorldRotation.Angles().yaw;
+		var yaw_diff = NormalizeAngle( TargetYaw - chair_yaw );
+		var at_angle = MathF.Abs( yaw_diff ) <= YawBounds;
+
+		Mouse.Visible = at_angle;
+
+		var cam_lock = GetCamLock();
+		if ( cam_lock.IsValid() )
+		{
+			cam_lock.IsLocked = at_angle;
+			cam_lock.TargetRotation = _chair.WorldRotation;
+		}
 	}
 
 	// applies centering force and yaw correction to the chair inside the zone
@@ -32,7 +59,6 @@ public sealed class ChairLockZone : Component, Component.ITriggerListener
 		if ( !_chair.IsValid() ) return;
 
 		var rb = _chair.GetComponent<Rigidbody>();
-		if ( !rb.IsValid() ) return;
 
 		var offset = (WorldPosition - _chair.WorldPosition).WithZ( 0 );
 		if ( offset.LengthSquared > 0.01f )
@@ -47,6 +73,13 @@ public sealed class ChairLockZone : Component, Component.ITriggerListener
 			angles.yaw = new_yaw;
 			_chair.WorldRotation = Rotation.From( angles );
 		}
+	}
+
+	private ChairCameraLock GetCamLock()
+	{
+		var base_chair = _chair.GetComponent<BaseChair>();
+		var occupant = base_chair?.GetOccupant();
+		return occupant?.GetComponent<ChairCameraLock>();
 	}
 
 	// normalizes angle to [-180, 180]

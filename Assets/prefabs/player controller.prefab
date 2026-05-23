@@ -190,6 +190,35 @@
         "RemoveUnownedItems": true,
         "Source": "OwnerConnection",
         "WorkshopItems": []
+      },
+      {
+        "__type": "ChairCameraLock",
+        "__guid": "74a4edc0-b15b-401b-bbf1-84c38aed793c",
+        "__enabled": true,
+        "Flags": 0,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PitchOffset": 20,
+        "Smoothing": 9
+      },
+      {
+        "__type": "Sandbox.WorldInput",
+        "__guid": "18d1f144-f577-4ad3-95c3-2cbf9296fd20",
+        "__enabled": true,
+        "Flags": 0,
+        "LeftMouseAction": "Attack1",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RightMouseAction": "Attack2",
+        "VRHandSource": "Left"
       }
     ],
     "Children": [
