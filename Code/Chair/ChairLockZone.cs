@@ -9,6 +9,7 @@ public sealed class ChairLockZone : Component, Component.ITriggerListener
 	[Property] public float YawSmoothing { get; set; } = 5f;
 
 	private ChairController _chair;
+	private ChairCameraLock _cam_lock;
 
 	// claim the chair when it enters
 	public void OnTriggerEnter( Collider other )
@@ -27,9 +28,9 @@ public sealed class ChairLockZone : Component, Component.ITriggerListener
 		if ( !chair.IsProxy )
 		{
 			Mouse.Visible = false;
-			var cam_lock = GetCamLock();
-			if ( cam_lock.IsValid() )
-				cam_lock.IsLocked = false;
+			if ( _cam_lock.IsValid() )
+				_cam_lock.IsLocked = false;
+			_cam_lock = null;
 		}
 		_chair = null;
 	}
@@ -43,13 +44,19 @@ public sealed class ChairLockZone : Component, Component.ITriggerListener
 		var yaw_diff = NormalizeAngle( TargetYaw - chair_yaw );
 		var at_angle = MathF.Abs( yaw_diff ) <= YawBounds;
 
-		Mouse.Visible = at_angle;
-
 		var cam_lock = GetCamLock();
 		if ( cam_lock.IsValid() )
 		{
+			Mouse.Visible = at_angle;
 			cam_lock.IsLocked = at_angle;
 			cam_lock.TargetRotation = _chair.WorldRotation;
+			_cam_lock = cam_lock;
+		}
+		else if ( _cam_lock.IsValid() )
+		{
+			Mouse.Visible = false;
+			_cam_lock.IsLocked = false;
+			_cam_lock = null;
 		}
 	}
 
