@@ -22,7 +22,7 @@ public sealed class ChairLockZone : Component, Component.ITriggerListener
 	public void OnTriggerExit( Collider other )
 	{
 		var chair = other.GameObject.GetComponentInParent<ChairController>();
-		if ( chair != _chair ) return;
+		if ( !chair.IsValid() || chair != _chair ) return;
 
 		if ( !chair.IsProxy )
 		{
