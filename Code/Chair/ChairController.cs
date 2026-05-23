@@ -11,12 +11,14 @@ public sealed class ChairController : Component
 
 	private BaseChair _chair;
 	private Rigidbody _rb;
+	private CameraComponent _cam;
 	private float _spin_rate;
 
 	protected override void OnStart()
 	{
 		_chair = GetComponent<BaseChair>();
 		_rb = GetComponent<Rigidbody>();
+		_cam = Scene.Camera;
 	}
 
 	// drives chair movement and spin from the seated player's input
@@ -31,8 +33,7 @@ public sealed class ChairController : Component
 
 		GameObject.Network.TakeOwnership(); // my chair!
 
-		var cam = pc.GetComponentInChildren<CameraComponent>();
-		var cam_forward = (Rotation.FromYaw( 90f ) * cam.WorldRotation.Forward).WithZ( 0 ).Normal;
+		var cam_forward = (Rotation.FromYaw( 90f ) * _cam.WorldRotation.Forward).WithZ( 0 ).Normal;
 		var forward = cam_forward;
 		var right = Rotation.LookAt( cam_forward, Vector3.Up ).Right;
 

@@ -96,8 +96,8 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Sun",
-          "Position": "-136.509674,-207.854919,193.685608",
-          "Rotation": "0,0.707106709,0,0.707106829",
+          "Position": "305.304565,194.1521,193.685608",
+          "Rotation": "-0.707106769,1.37678754E-07,0.70710665,1.37678782E-07",
           "Scale": "1,1,1",
           "Tags": "light_directional,light",
           "Enabled": true,
@@ -177,76 +177,11 @@
       ]
     },
     {
-      "__guid": "dea59913-c332-4fe0-b6ab-8bccf67a659a",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "Screen",
-      "Position": "27.9943314,171.752594,50.6505623",
-      "Rotation": "0,0,0.707106769,-0.707106769",
-      "Scale": "0.400000006,0.100000001,0.25",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "57cc5806-a36c-45e3-b068-2633e33d68ec",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "LodOverride": null,
-          "MaterialGroup": null,
-          "MaterialOverride": "materials/screen.vmat",
-          "Materials": null,
-          "Model": "models/dev/box.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ScreenDisplay",
-          "__guid": "0633f804-4b57-43ec-8845-fc27418d8f37",
-          "__enabled": true,
-          "Flags": 0,
-          "ConnectionUri": "ws://localhost:8080",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Renderer": {
-            "_type": "component",
-            "component_id": "57cc5806-a36c-45e3-b068-2633e33d68ec",
-            "go": "dea59913-c332-4fe0-b6ab-8bccf67a659a",
-            "component_type": "ModelRenderer"
-          }
-        }
-      ],
-      "Children": []
-    },
-    {
       "__guid": "41ea034d-2395-4dea-b347-b63b779d7333",
       "__version": 2,
       "Flags": 0,
       "Name": "Chair",
-      "Position": "0,0,29.0670357",
+      "Position": "0,-105.401535,29.0670357",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
       "Tags": "chair",
@@ -518,7 +453,7 @@
       "__guid": "9d00dd3c-cdd7-4517-a5a2-c5e74f827d45",
       "__version": 2,
       "Flags": 0,
-      "Name": "NetworkHelper",
+      "Name": "NetworkManager",
       "Position": "306.399567,-265.649902,102.72641",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
@@ -531,8 +466,8 @@
       "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "Sandbox.NetworkHelper",
-          "__guid": "ae089097-100d-40d2-9b93-55c84aac3bf0",
+          "__type": "NetworkManager",
+          "__guid": "9729ecd5-483b-4d87-8d0e-0ad12e2b5c2f",
           "__enabled": true,
           "Flags": 0,
           "OnComponentDestroy": null,
@@ -543,15 +478,12 @@
           "OnComponentUpdate": null,
           "PlayerPrefab": {
             "_type": "gameobject",
-            "prefab": "player controller.prefab"
+            "prefab": "prefabs/player controller.prefab"
           },
-          "SpawnPoints": [
-            {
-              "_type": "gameobject",
-              "go": "31b7f539-35fa-44c8-a497-a3a0c4eb021c"
-            }
-          ],
-          "StartServer": true
+          "SpawnPoint": {
+            "_type": "gameobject",
+            "go": "31b7f539-35fa-44c8-a497-a3a0c4eb021c"
+          }
         }
       ],
       "Children": []
@@ -710,13 +642,61 @@
       "Children": []
     },
     {
-      "__guid": "f8095aa1-5049-4b62-99fd-c8ab382b5e2b",
+      "__guid": "d5abb616-5361-4188-92a5-341898a63eb8",
       "__version": 2,
       "Flags": 0,
-      "Name": "tv",
-      "Position": "16.0679245,171.752502,34.0187035",
+      "Name": "Camera",
+      "Position": "529.733398,-283.428802,276.195984",
       "Rotation": "0,0,0,1",
       "Scale": "1,1,1",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "9b32bb7b-7cfc-4b86-8d54-caa6fb78c401",
+          "__enabled": true,
+          "Flags": 0,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "EnablePostProcessing": true,
+          "FieldOfView": 60,
+          "FovAxis": "Horizontal",
+          "IsMainCamera": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "PostProcessAnchor": null,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "RenderTexture": null,
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "2092efa2-86ab-4412-bac6-079b7851665b",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Monitor",
+      "Position": "18.4740677,206.439133,48.4946404",
+      "Rotation": "0,0,0,1",
+      "Scale": "0.0199999996,0.0199999996,0.0199999996",
       "Tags": "",
       "Enabled": true,
       "NetworkMode": 2,
@@ -726,29 +706,8 @@
       "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "Sandbox.Prop",
-          "__guid": "ce004548-4433-4727-911c-9fed1d2aee3d",
-          "__enabled": true,
-          "Flags": 0,
-          "BodyGroups": 18446744073709551615,
-          "Health": 15,
-          "IsStatic": false,
-          "MaterialGroup": null,
-          "Model": "models/sbox_props/tv/tv.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnPropBreak": null,
-          "OnPropTakeDamage": null,
-          "StartAsleep": false,
-          "Tint": "1,1,1,1"
-        },
-        {
           "__type": "Sandbox.ModelRenderer",
-          "__guid": "b0fbf2b1-3aff-4a1b-a51b-7d9e5290e3db",
+          "__guid": "2071585a-5965-4fb0-93f6-0d38c2895e8e",
           "__enabled": true,
           "Flags": 0,
           "BodyGroups": 18446744073709551615,
@@ -757,7 +716,7 @@
           "MaterialGroup": null,
           "MaterialOverride": null,
           "Materials": null,
-          "Model": "models/sbox_props/tv/tv.vmdl",
+          "Model": "models/monitor.vmdl",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -772,69 +731,66 @@
           },
           "RenderType": "On",
           "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.ModelCollider",
-          "__guid": "4064a440-a566-477d-af9b-15d0775e5bb9",
-          "__enabled": true,
-          "Flags": 0,
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": false,
-          "Model": "models/sbox_props/tv/tv.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Static": false,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        },
-        {
-          "__type": "Sandbox.Rigidbody",
-          "__guid": "a50d1244-50bd-46ec-ac47-3d5c25b393dd",
-          "__enabled": true,
-          "Flags": 0,
-          "AngularDamping": 0,
-          "EnableImpactDamage": true,
-          "EnhancedCcd": false,
-          "Gravity": true,
-          "GravityScale": 1,
-          "ImpactDamage": 15,
-          "LinearDamping": 0,
-          "Locking": {
-            "X": false,
-            "Y": false,
-            "Z": false,
-            "Pitch": false,
-            "Yaw": false,
-            "Roll": false
-          },
-          "MassCenterOverride": "0,0,0",
-          "MassOverride": 20,
-          "MinImpactDamageSpeed": 600,
-          "MotionEnabled": true,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OverrideMassCenter": false,
-          "RigidbodyFlags": 0,
-          "SleepThreshold": 2,
-          "StartAsleep": false
         }
       ],
-      "Children": []
+      "Children": [
+        {
+          "__guid": "8b7b6d98-f5a7-49c5-8afc-f1ae0b501236",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Screen",
+          "Position": "20.9750175,-1575.06653,29.5484695",
+          "Rotation": "0,0,0,1",
+          "Scale": "50,50,50",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 1,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.WorldPanel",
+              "__guid": "53fbff53-56f1-434f-96e5-84d9195cff1c",
+              "__enabled": true,
+              "Flags": 0,
+              "HorizontalAlign": "Center",
+              "InteractionRange": 1000,
+              "LookAtCamera": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "PanelSize": "710,410",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderScale": 1,
+              "VerticalAlign": "Center"
+            },
+            {
+              "__type": "ScreenDisplayPanel",
+              "__guid": "c926c0c7-1f0f-4db9-b161-004111b46ce5",
+              "__enabled": true,
+              "Flags": 0,
+              "ConnectionUri": "ws://localhost:8080",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
+          "Children": []
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -861,6 +817,11 @@
         "Data": {
           "SelectionSets": []
         }
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "ceabec0a-1f73-4ea6-969e-d45c2c157f58"
+        }
       }
     }
   },
@@ -869,7 +830,6 @@
   "Description": null,
   "__references": [
     "facepunch.office_chair#131947",
-    "facepunch.tv#143951",
     "facepunch.wooden_chair_a#43573",
     "facepunch.wooden_desk_01#143439"
   ],
