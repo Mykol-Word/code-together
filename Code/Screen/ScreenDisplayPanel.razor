@@ -10,7 +10,7 @@
 		{
 			<div class="no-stream">no stream websocket found</div>
 		}
-		<label class="stop-btn" onclick="@StopStreaming">stop streaming</label>
+		<label class="stop-btn" onclick="@OnStopStreamingClick">stop streaming</label>
 	</div>
 </root>
 
@@ -80,6 +80,12 @@
 		Panel.GetChild( 0 ).Style.SetBackgroundImage( _texture );
 
 		_texture.Update( _bitmap );
+	}
+
+	void OnStopStreamingClick()
+	{
+		if ( IsProxy ) return;
+		StopStreaming();
 	}
 
 	[Rpc.Broadcast]

@@ -12,7 +12,7 @@
 	else
 	{
 		<div class="view">
-			<label class="btn" onclick="@StreamScreen">stream screen</label>
+			<label class="btn" onclick="@OnStreamScreenClick">stream screen</label>
 			<label class="btn" onclick="@SetScreen">set screen</label>
 			<label class="btn danger" onclick="@Unclaim">unclaim</label>
 		</div>
@@ -34,6 +34,12 @@
 		_claimed = false;
 		GameObject.Network.DropOwnership();
 	}
+	void OnStreamScreenClick()
+	{
+		if ( IsProxy ) return;
+		StreamScreen();
+	}
+
 	[Rpc.Broadcast]
 	void StreamScreen()
 	{
