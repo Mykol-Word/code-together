@@ -89,8 +89,8 @@
         "RunSpeed": 320,
         "ShowColliderComponents": false,
         "ShowRigidbodyComponent": false,
-        "ThirdPerson": true,
-        "ToggleCameraModeButton": "view",
+        "ThirdPerson": false,
+        "ToggleCameraModeButton": "",
         "UseAnimatorControls": true,
         "UseButton": "Use",
         "UseCameraControls": true,
@@ -219,6 +219,18 @@
         "OnComponentUpdate": null,
         "RightMouseAction": "Attack2",
         "VRHandSource": "Left"
+      },
+      {
+        "__type": "FreeLookHold",
+        "__guid": "da7f1c47-ee7e-4ce8-b960-542ee2267d50",
+        "__enabled": true,
+        "Flags": 0,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null
       }
     ],
     "Children": [
