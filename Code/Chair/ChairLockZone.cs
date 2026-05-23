@@ -55,7 +55,7 @@ public sealed class ChairLockZone : Component, Component.ITriggerListener
 		else if ( _cam_lock.IsValid() )
 		{
 			Mouse.Visible = false;
-			_cam_lock.IsLocked = false;
+			_cam_lock.ReleaseLock();
 			_cam_lock = null;
 		}
 	}

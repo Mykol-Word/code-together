@@ -9,9 +9,7 @@ public sealed class ChairCameraLock : Component, PlayerController.IEvents
 	[Property] public float Smoothing { get; set; } = 5f;
 
 	private Rotation _current;
-	private Rotation _eye_cam_offset;
 	private bool _was_locked;
-	private float _entry_chair_yaw;
 
 	// overrides camera rotation to face the chair forward direction after the camera is placed
 	void PlayerController.IEvents.PostCameraSetup( CameraComponent cam )
@@ -24,7 +22,7 @@ public sealed class ChairCameraLock : Component, PlayerController.IEvents
 			{
 				_was_locked = false;
 				cam.WorldRotation = _current;
-				pc.EyeAngles = ComputeEyeAngles();
+				pc.EyeAngles = (TargetRotation.Inverse * _current).Angles();
 				return;
 			}
 			_current = cam.WorldRotation;
@@ -33,8 +31,7 @@ public sealed class ChairCameraLock : Component, PlayerController.IEvents
 
 		if ( !_was_locked )
 		{
-			_eye_cam_offset = cam.WorldRotation * Rotation.From( pc.EyeAngles ).Inverse;
-			_entry_chair_yaw = TargetRotation.Angles().yaw;
+			_current = cam.WorldRotation;
 			_was_locked = true;
 		}
 
@@ -42,14 +39,13 @@ public sealed class ChairCameraLock : Component, PlayerController.IEvents
 		angles.pitch += PitchOffset;
 		_current = Rotation.Lerp( _current, Rotation.From( angles ), Smoothing * Time.Delta );
 		cam.WorldRotation = _current;
-		pc.EyeAngles = ComputeEyeAngles();
+		pc.EyeAngles = (TargetRotation.Inverse * _current).Angles();
 	}
 
-	// rotates _current back to the entry reference before applying offset inverse,
-	// correcting for the chair having drifted from the entry direction
-	private Angles ComputeEyeAngles()
+	// clears lock state without triggering camera restoration
+	public void ReleaseLock()
 	{
-		var yaw_diff = _entry_chair_yaw - TargetRotation.Angles().yaw;
-		return ( _eye_cam_offset.Inverse * Rotation.FromYaw( yaw_diff ) * _current ).Angles();
+		_was_locked = false;
+		IsLocked = false;
 	}
 }
