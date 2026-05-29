@@ -256,7 +256,7 @@
           "OnTriggerExit": null,
           "RollingResistance": null,
           "Static": false,
-          "Surface": null,
+          "Surface": "physics/frictionless.surface",
           "SurfaceVelocity": "0,0,0"
         },
         {
@@ -291,7 +291,7 @@
           "__guid": "ea945a21-a0fa-4622-94e5-b5ec816f3347",
           "__enabled": true,
           "Flags": 0,
-          "AngularDamping": 0,
+          "AngularDamping": 1,
           "EnableImpactDamage": true,
           "EnhancedCcd": false,
           "Gravity": true,
