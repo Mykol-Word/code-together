@@ -29,7 +29,7 @@
 	{
 		if ( IsProxy ) return;
 
-		Socket = new WebSocket();
+		Socket = new WebSocket(500000); // 500 KB limit
 		Socket.OnMessageReceived += OnFrame;
 		_ = Connect();
 	}
