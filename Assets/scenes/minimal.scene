@@ -169,7 +169,8 @@
               "OnComponentStart": null,
               "OnComponentUpdate": null,
               "ProbeDensity": 8,
-              "RelocationTexture": "scenes/minimal_scene_data/ddgi/indirect light volume_relocation_afedd9ec-d0ab-4816-a17e-2bb5916d041f.vtex"
+              "RelocationTexture": "scenes/minimal_scene_data/ddgi/indirect light volume_relocation_afedd9ec-d0ab-4816-a17e-2bb5916d041f.vtex",
+              "RenderExcludeTags": ""
             }
           ],
           "Children": []
@@ -1089,14 +1090,14 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "ceabec0a-1f73-4ea6-969e-d45c2c157f58"
-        }
-      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
+        }
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "ceabec0a-1f73-4ea6-969e-d45c2c157f58"
         }
       }
     }

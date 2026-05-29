@@ -25,6 +25,18 @@
 
 	void Claim()
 	{
+		// ugly double check but fine for now
+		foreach ( var monitor in Scene.GetAllComponents<MonitorPanel>() )
+		{
+			if ( monitor.GameObject.Network.OwnerId == Connection.Local.Id )
+				return;
+		}
+		foreach ( var stream in Scene.GetAllComponents<ScreenDisplayPanel>() )
+		{
+			if ( stream.GameObject.Network.OwnerId == Connection.Local.Id )
+				return;
+		}
+
 		GameObject.Network.TakeOwnership();
 		_claimed = true;
 	}
