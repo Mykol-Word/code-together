@@ -1,0 +1,117 @@
+{
+  "RootObject": {
+    "__guid": "9c1961a7-8d97-4f05-b92d-29a8782836ba",
+    "__version": 2,
+    "Flags": 0,
+    "Name": "DeskSetup",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkFlags": 0,
+    "NetworkOrphaned": 0,
+    "NetworkTransmit": true,
+    "OwnerTransfer": 1,
+    "Components": [],
+    "Children": [
+      {
+        "__guid": "027b40e9-75b9-415c-ac20-f3ebcc58c8c0",
+        "__version": 2,
+        "__Prefab": "prefabs/monitor.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "59a4976a-7727-4104-ad7f-dbddd6346a39"
+              },
+              "Property": "Name",
+              "Value": "Monitor"
+            },
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "59a4976a-7727-4104-ad7f-dbddd6346a39"
+              },
+              "Property": "Position",
+              "Value": "49.8906174,-53.544693,57.2405891"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "59a4976a-7727-4104-ad7f-dbddd6346a39": "027b40e9-75b9-415c-ac20-f3ebcc58c8c0",
+          "8d22b54d-8774-4c36-b1e1-9d820931ff2e": "83019233-2c86-4706-9967-fed83adad1b8",
+          "59edc4c8-eadd-4860-9879-51955fe2bccf": "deae0d6b-6102-4c74-9b74-299b50e52668",
+          "25a3f5b2-bad4-416c-85b2-d902c44d7b87": "f200adb4-5033-4080-8a13-150f71767336",
+          "51898dcd-250a-4480-bc81-0ec99d4cc631": "4aabde4f-fbf9-4455-8f37-0645855b21dc",
+          "0080013c-e53d-49d4-a31d-60c77fc68023": "55ca64db-b476-4496-8f48-930c66ba04af",
+          "55a714c2-0807-4d2a-af52-16639c38cbea": "9fb60d03-484c-4eef-be2e-87ad95816c89",
+          "c34a15ab-bc14-4006-9926-7463df4f55a0": "b5ae27bc-222d-4375-abd5-3ea77ae66f37"
+        }
+      },
+      {
+        "__guid": "7ed9e341-80a6-4197-958e-45c3e7f1035b",
+        "__version": 2,
+        "__Prefab": "prefabs/chairlockzone.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "0f5f984a-0528-4935-b4a6-e4666e68908c"
+              },
+              "Property": "Position",
+              "Value": "85.599411,-85.115921,24.7459488"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "0f5f984a-0528-4935-b4a6-e4666e68908c": "7ed9e341-80a6-4197-958e-45c3e7f1035b",
+          "bac4cc39-df97-4355-9e1f-aceecbc73dfc": "aa3e3430-c864-4bde-bcf1-b4acbef71397",
+          "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "6ac5add7-ce91-4e7d-9cc5-5628f72e717e"
+        }
+      },
+      {
+        "__guid": "489e2704-a3e7-4e5e-a638-ead83352d86e",
+        "__version": 2,
+        "__Prefab": "prefabs/desk.prefab",
+        "__PrefabInstancePatch": {
+          "AddedObjects": [],
+          "RemovedObjects": [],
+          "PropertyOverrides": [
+            {
+              "Target": {
+                "Type": "GameObject",
+                "IdValue": "33e51051-4454-49ab-a719-8f39616bba07"
+              },
+              "Property": "Position",
+              "Value": "49.8906174,-87.0217743,8.74594879"
+            }
+          ],
+          "MovedObjects": []
+        },
+        "__PrefabIdToInstanceId": {
+          "33e51051-4454-49ab-a719-8f39616bba07": "489e2704-a3e7-4e5e-a638-ead83352d86e",
+          "8f9f30c6-07ab-4fe1-a6e7-0b7e4779e762": "cebe7715-538b-4aee-9984-15efbdbfe74c",
+          "b712ff5f-3a3b-482b-b7f0-4b0a1a886b38": "01a8598e-d157-4238-91ce-f10dd15c8385",
+          "5b60987c-9fae-4e52-b7b0-b65868d07120": "6ab90a7c-7e68-40b3-b844-1795cfc01279"
+        }
+      }
+    ]
+  },
+  "ResourceVersion": 2,
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "__references": [],
+  "__version": 2
+}

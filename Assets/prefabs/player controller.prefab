@@ -49,7 +49,7 @@
         "BodyMass": 500,
         "BodyRadius": 16,
         "BrakePower": 1,
-        "CameraOffset": "156,0,6",
+        "CameraOffset": "150,0,-10",
         "ColliderObject": {
           "_type": "gameobject",
           "go": "0e857d42-53eb-4b4a-bdcc-452e94a91805"
@@ -75,7 +75,7 @@
         "OnComponentStart": null,
         "OnComponentUpdate": null,
         "PitchClamp": 90,
-        "ReachLength": 200,
+        "ReachLength": 100,
         "Renderer": {
           "_type": "component",
           "component_id": "f8ee5130-4b03-4db4-b013-6c4bd823faa2",
@@ -89,7 +89,7 @@
         "RunSpeed": 320,
         "ShowColliderComponents": false,
         "ShowRigidbodyComponent": false,
-        "ThirdPerson": false,
+        "ThirdPerson": true,
         "ToggleCameraModeButton": "",
         "UseAnimatorControls": true,
         "UseButton": "Use",
@@ -196,6 +196,14 @@
         "__guid": "74a4edc0-b15b-401b-bbf1-84c38aed793c",
         "__enabled": true,
         "Flags": 0,
+        "BodyRenderer": {
+          "_type": "component",
+          "component_id": "f8ee5130-4b03-4db4-b013-6c4bd823faa2",
+          "go": "dcedbfe3-1da7-4039-aa20-2952c4e5f4f8",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "LockedBodyAlpha": 0.3,
+        "LockedCameraOffsetX": 30,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
