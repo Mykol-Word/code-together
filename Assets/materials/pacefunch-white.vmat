@@ -1,0 +1,19 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/blendable.shader"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Material A ----
+	g_flTintColorA "[1.000000 1.000000 1.000000 0.000000]"
+	TextureAmbientOcclusionA "materials/default/default_ao.tga"
+	TextureBlendMaskA "materials/default/default_blend.tga"
+	TextureColorA "[1.000000 0.639216 0.639216 0.000000]"
+	TextureMetalnessA "[0.250000 0.250000 0.250000 0.000000]"
+	TextureNormalA "materials/default/default_normal.tga"
+	TextureRoughnessA "[0.372000 0.372000 0.372000 0.000000]"
+	TextureTintMaskA "materials/default/default.tga"
+}
