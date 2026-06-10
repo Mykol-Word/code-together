@@ -48,8 +48,8 @@
     "FootLaunch": null,
     "FootLand": null,
     "Bullet": null,
-    "ImpactHard": null,
-    "ImpactSoft": null,
+    "ImpactHard": "sounds/impacts/melee/impact-melee-sand.sound",
+    "ImpactSoft": "sounds/impacts/melee/impact-melee-sand.sound",
     "ScrapeRough": null,
     "ScrapeSmooth": null,
     "Break": null

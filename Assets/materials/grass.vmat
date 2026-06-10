@@ -1,0 +1,6 @@
+
+Layer0
+{
+	shader "shaders/grass.shader_c"
+
+}

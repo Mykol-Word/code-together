@@ -7,10 +7,16 @@ public sealed class SoccerMinigame : Component
 	public GameObject Ball { get; set; }
 
 	[Property, Group( "References" )]
-	public Collider WhiteGoal { get; set; }
+	public Collider RedGoal { get; set; }
 
 	[Property, Group( "References" )]
 	public Collider BlackGoal { get; set; }
+
+	[Property, Group( "References" )]
+	public GoalLightManager RedLights { get; set; }
+
+	[Property, Group( "References" )]
+	public GoalLightManager BlackLights { get; set; }
 
 	[Property, Group( "Settings" )]
 	public Vector2 Bounds { get; set; } = new Vector2( 200f, 200f );
@@ -33,12 +39,30 @@ public sealed class SoccerMinigame : Component
 	[Property, Group( "Settings" )]
 	public float RespawnScale { get; set; } = 1f;
 
+	[Property, Group( "Settings" )]
+	public int PointsToWin { get; set; } = 3;
+
+	[Property, Group( "Settings" )]
+	public int FlashCount { get; set; } = 3;
+
+	[Property, Group( "Settings" )]
+	public float FlashPeriod { get; set; } = 0.4f;
+
+	private enum BallState { Active, Respawning, Celebrating }
+
 	private Rigidbody _ball_body;
 	private Collider _ball_collider;
 	private ModelRenderer _ball_renderer;
 	private TrailRenderer _ball_trail;
-	private bool _resetting;
 	private float _scale_elapsed = -1f;
+	private int _red_score;
+	private int _black_score;
+
+	private BallState _state = BallState.Active;
+	private float _state_timer;
+	private int _flashes_left;
+	private bool _flash_on;
+	private GoalLightManager _winner;
 
 	protected override void OnStart()
 	{
@@ -51,21 +75,12 @@ public sealed class SoccerMinigame : Component
 		_ball_trail = Ball.Components.Get<TrailRenderer>( FindMode.EverythingInSelfAndDescendants );
 	}
 
-	// orchestrates the goal reset on the host: broadcasts the hide, waits, then broadcasts the respawn
-	private async void ResetBall()
+	// hides the ball and starts the respawn countdown
+	private void StartRespawn()
 	{
-		if ( _resetting )
-			return;
-
-		_resetting = true;
-
 		HideBall();
-
-		await GameTask.DelaySeconds( RespawnDelay );
-
-		ShowBall();
-
-		_resetting = false;
+		_state = BallState.Respawning;
+		_state_timer = RespawnDelay;
 	}
 
 	// disables the ball on every client
@@ -92,7 +107,7 @@ public sealed class SoccerMinigame : Component
 		_scale_elapsed = 0f;
 	}
 
-	// logs and resets the ball when it enters a goal trigger
+	// scores for the matching team when the ball enters a goal trigger
 	private void CheckGoals()
 	{
 		if ( _ball_collider is null )
@@ -101,22 +116,104 @@ public sealed class SoccerMinigame : Component
 		if ( !Networking.IsHost )
 			return;
 
-		if ( WhiteGoal is not null && WhiteGoal.Touching.Contains( _ball_collider ) )
+		if ( _state != BallState.Active )
+			return;
+
+		if ( RedGoal is not null && RedGoal.Touching.Contains( _ball_collider ) )
 		{
-			Log.Info( "ball in white goal" );
-			ResetBall();
+			Log.Info( "ball in red goal" );
+			ScoreGoal( RedLights, ref _red_score );
 		}
 
 		if ( BlackGoal is not null && BlackGoal.Touching.Contains( _ball_collider ) )
 		{
 			Log.Info( "ball in black goal" );
-			ResetBall();
+			ScoreGoal( BlackLights, ref _black_score );
 		}
 	}
 
-	// scales the ball in from zero after respawn
+	// lights the scoring team's next bulb, bumps their score, then respawns or triggers a win
+	private void ScoreGoal( GoalLightManager lights, ref int score )
+	{
+		lights.TurnOnLight( score );
+		score++;
+
+		if ( score >= PointsToWin )
+			StartCelebration( lights );
+		else
+			StartRespawn();
+	}
+
+	// hides the ball and begins the winning team's flash celebration
+	private void StartCelebration( GoalLightManager lights )
+	{
+		HideBall();
+		_winner = lights;
+		_flashes_left = FlashCount;
+		_flash_on = false;
+		_state_timer = 0f;
+		_state = BallState.Celebrating;
+	}
+
+	// advances the respawn countdown and the win celebration each frame
+	private void UpdateBallState()
+	{
+		if ( _state == BallState.Respawning )
+		{
+			_state_timer -= Time.Delta;
+			if ( _state_timer <= 0f )
+			{
+				ShowBall();
+				_state = BallState.Active;
+			}
+		}
+		else if ( _state == BallState.Celebrating )
+		{
+			_state_timer -= Time.Delta;
+			if ( _state_timer > 0f )
+				return;
+
+			if ( _flashes_left <= 0 )
+			{
+				ResetLights();
+				_red_score = 0;
+				_black_score = 0;
+				ShowBall();
+				_state = BallState.Active;
+				return;
+			}
+
+			_flash_on = !_flash_on;
+			for ( int l = 0; l < 3; l++ )
+			{
+				if ( _flash_on )
+					_winner.TurnOnLight( l );
+				else
+					_winner.TurnOffLight( l );
+			}
+
+			if ( !_flash_on )
+				_flashes_left--;
+
+			_state_timer = FlashPeriod * 0.5f;
+		}
+	}
+
+	// turns every light of both teams off
+	private void ResetLights()
+	{
+		for ( int l = 0; l < 3; l++ )
+		{
+			RedLights.TurnOffLight( l );
+			BlackLights.TurnOffLight( l );
+		}
+	}
+
+	// drives respawn/celebration timing and scales the ball in from zero after respawn
 	protected override void OnUpdate()
 	{
+		UpdateBallState();
+
 		if ( _scale_elapsed < 0f )
 			return;
 
