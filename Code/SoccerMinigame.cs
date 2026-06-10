@@ -36,6 +36,7 @@ public sealed class SoccerMinigame : Component
 	private Rigidbody _ball_body;
 	private Collider _ball_collider;
 	private ModelRenderer _ball_renderer;
+	private TrailRenderer _ball_trail;
 	private bool _resetting;
 	private float _scale_elapsed = -1f;
 
@@ -47,9 +48,10 @@ public sealed class SoccerMinigame : Component
 		_ball_body = Ball.Components.Get<Rigidbody>( FindMode.EverythingInSelfAndDescendants );
 		_ball_collider = Ball.Components.Get<Collider>( FindMode.EverythingInSelfAndDescendants );
 		_ball_renderer = Ball.Components.Get<ModelRenderer>( FindMode.EverythingInSelfAndDescendants );
+		_ball_trail = Ball.Components.Get<TrailRenderer>( FindMode.EverythingInSelfAndDescendants );
 	}
 
-	// disables the ball, teleports it, then scales it back in after a delay
+	// orchestrates the goal reset on the host: broadcasts the hide, waits, then broadcasts the respawn
 	private async void ResetBall()
 	{
 		if ( _resetting )
@@ -57,28 +59,46 @@ public sealed class SoccerMinigame : Component
 
 		_resetting = true;
 
+		HideBall();
+
+		await GameTask.DelaySeconds( RespawnDelay );
+
+		ShowBall();
+
+		_resetting = false;
+	}
+
+	// disables the ball on every client
+	[Rpc.Broadcast]
+	private void HideBall()
+	{
 		_ball_body.Velocity = Vector3.Zero;
-		_ball_body.WorldPosition = WorldPosition;
 
 		if ( _ball_renderer is not null ) _ball_renderer.Enabled = false;
 		_ball_collider.Enabled = false;
 		_ball_body.Enabled = false;
 		Ball.LocalScale = Vector3.Zero;
+	}
 
-		await GameTask.DelaySeconds( RespawnDelay );
-
+	// teleports, re-enables the ball and starts the scale-in on every client
+	[Rpc.Broadcast]
+	private void ShowBall()
+	{
+		_ball_body.WorldPosition = WorldPosition;
 		_ball_body.Enabled = true;
 		_ball_collider.Enabled = true;
 		if ( _ball_renderer is not null ) _ball_renderer.Enabled = true;
+		_ball_trail.Enabled = true;
 		_scale_elapsed = 0f;
-
-		_resetting = false;
 	}
 
 	// logs and resets the ball when it enters a goal trigger
 	private void CheckGoals()
 	{
 		if ( _ball_collider is null )
+			return;
+
+		if ( !Networking.IsHost )
 			return;
 
 		if ( WhiteGoal is not null && WhiteGoal.Touching.Contains( _ball_collider ) )

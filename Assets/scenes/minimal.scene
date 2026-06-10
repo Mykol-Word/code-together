@@ -7445,13 +7445,13 @@
       "__guid": "f016a688-cdd9-4ef4-9f7d-055d424050a5",
       "__version": 2,
       "Flags": 0,
-      "Name": "Sphere",
-      "Position": "511.929321,552.491577,65.2793884",
+      "Name": "Ball",
+      "Position": "550,500,160",
       "Rotation": "0,0,0,1",
       "Scale": "0.300000012,0.300000012,0.300000012",
       "Tags": "ball",
       "Enabled": true,
-      "NetworkMode": 2,
+      "NetworkMode": 1,
       "NetworkFlags": 0,
       "NetworkOrphaned": 0,
       "NetworkTransmit": true,
@@ -7544,6 +7544,87 @@
           "RigidbodyFlags": 0,
           "SleepThreshold": 2,
           "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.TrailRenderer",
+          "__guid": "cd56f7e2-6a25-4ab9-a0e9-6260bb2c28fe",
+          "__enabled": true,
+          "Flags": 0,
+          "BlendMode": "Normal",
+          "CastShadows": false,
+          "Color": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0,
+                "c": "1,1,1,1"
+              },
+              {
+                "t": 1,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": [
+              {
+                "t": 0,
+                "a": 1
+              },
+              {
+                "t": 1,
+                "a": 0
+              }
+            ]
+          },
+          "Emitting": true,
+          "Face": "Camera",
+          "LifeTime": 0.5,
+          "MaxPoints": 64,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opaque": false,
+          "PointDistance": 5,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Texturing": {
+            "Texture": null,
+            "Material": null,
+            "WorldSpace": false,
+            "UnitsPerTexture": 10,
+            "Scale": 1,
+            "Offset": 0,
+            "Scroll": 0,
+            "FilterMode": "Anisotropic",
+            "TextureAddressMode": "Wrap",
+            "Clamp": false
+          },
+          "Width": {
+            "rangey": "0,4",
+            "frames": [
+              {
+                "x": 0,
+                "y": 1,
+                "in": -0,
+                "out": -0,
+                "mode": "Mirrored"
+              },
+              {
+                "x": 1,
+                "y": 0,
+                "in": 3.1415927,
+                "out": -3.1415927,
+                "mode": "Mirrored"
+              }
+            ]
+          },
+          "Wireframe": false
         }
       ],
       "Children": []
@@ -7558,7 +7639,7 @@
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
-      "NetworkMode": 2,
+      "NetworkMode": 1,
       "NetworkFlags": 0,
       "NetworkOrphaned": 0,
       "NetworkTransmit": true,
@@ -7626,6 +7707,11 @@
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
+        }
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "6a02a24c-b80b-407f-98a0-c7e13e45f366"
         }
       }
     }
