@@ -1,0 +1,57 @@
+@namespace Sandbox
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	@if ( Game.IsValid() )
+	{
+		<div class="screen">
+			<label class="title">HOT BUZZER</label>
+
+			@if ( Game.Phase == HotBuzzerPhase.Lobby )
+			{
+				<div class="cols">
+					<div class="col">
+						<label>Left Click to ready up</label>
+						<label class="count">@Game.GetReadyCount()/@Game.GetSeatedCount() players ready</label>
+					</div>
+					<div class="divider"></div>
+					<div class="col">
+						@if ( Game.LastLoser == "" )
+						{
+							<label class="count">no games played this session</label>
+						}
+						else
+						{
+							<label class="loser">last loser: @Game.LastLoser</label>
+						}
+						<label class="count">longest sequence: @Game.BestSequence</label>
+					</div>
+				</div>
+			}
+			else
+			{
+				<label class="turn">@Game.GetTurnPlayerName()'s turn</label>
+
+				@if ( Game.Phase == HotBuzzerPhase.Replay )
+				{
+					<label class="wait">wait... the sequence is playing</label>
+				}
+				else
+				{
+					<label class="count">sequence length: @Game.GetSequenceLength()</label>
+				}
+			}
+		</div>
+	}
+</root>
+
+@code
+{
+	public HotBuzzer Game { get; set; }
+
+	protected override int BuildHash() => Game.IsValid()
+		? System.HashCode.Combine( Game.Phase, Game.GetReadyCount(), Game.GetSeatedCount(), Game.GetTurnPlayerName(), Game.GetSequenceLength(), Game.LastLoser, Game.BestSequence )
+		: 0;
+}

@@ -5700,12 +5700,277 @@
       "Children": []
     },
     {
-      "__guid": "9839a22e-1b12-4421-8de5-91843447ccdc",
+      "__guid": "ab6f32d9-ee1d-4747-9e04-6e945461321a",
       "__version": 2,
       "Flags": 0,
       "Name": "stool1",
-      "Position": "183.545792,258.558472,-0.018560417",
-      "Rotation": "0,0,-0.991444826,0.130526364",
+      "Position": "152.145279,300.712433,-5.52162361",
+      "Rotation": "0,0,-0.956072032,0.293131918",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.BaseChair",
+          "__guid": "b6dd6479-b3d6-48ee-a092-8a41a9881d87",
+          "__enabled": true,
+          "Flags": 0,
+          "ExitPoints": [
+            {
+              "_type": "gameobject",
+              "go": "6c19982e-11ce-426b-a4cf-bd163dbade43"
+            }
+          ],
+          "EyePosition": {
+            "_type": "gameobject",
+            "go": "8b5fb79e-eaf9-4274-8701-adfd68ee362d"
+          },
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "PitchRange": "-50,70",
+          "SeatPosition": {
+            "_type": "gameobject",
+            "go": "9734dc1a-ea85-41de-b18f-240de236a8cc"
+          },
+          "SitHeight": 0,
+          "SitPose": "Chair",
+          "TooltipDescription": "",
+          "TooltipIcon": "airline_seat_recline_normal",
+          "TooltipTitle": "Sit",
+          "YawRange": "-180,180"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "997e8f01-371f-4866-9d95-fff63ce9cd8c",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "0,0,25",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "25,25,50",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "ChairHandIk",
+          "__guid": "059b8a08-7ffb-490b-8d6c-5ddd60ba79b8",
+          "__enabled": true,
+          "Flags": 0,
+          "ApplyHandPose": true,
+          "Button": {
+            "_type": "gameobject",
+            "go": "ff4d8f82-74f6-4041-a786-47df13b9f5f8"
+          },
+          "HandPose": 0.02,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "TargetOffset": "0,0,8",
+          "UseLeftHand": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "9734dc1a-ea85-41de-b18f-240de236a8cc",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "seat",
+          "Position": "1.27643776,0,22.3894348",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "8b5fb79e-eaf9-4274-8701-adfd68ee362d",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "eye",
+          "Position": "0,0,71.5143433",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "17df9e0e-56f0-4c2f-9e8a-9708bfcebab2",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "opm0014 (1)",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0.427279234,0.90411973",
+          "Scale": "0.5,0.5,0.75",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.Prop",
+              "__guid": "5d78daa8-0303-4b30-9288-673778cb40c7",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "Health": 0,
+              "IsStatic": true,
+              "MaterialGroup": null,
+              "Model": "models/stool/opm0014.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnPropBreak": null,
+              "OnPropTakeDamage": null,
+              "StartAsleep": false,
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "489b393b-70cb-446a-aaf9-896ec43dbeb5",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/pacefunch-red.vmat",
+              "Materials": null,
+              "Model": "models/stool/opm0014.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.ModelCollider",
+              "__guid": "bdb568ea-3adb-4acb-8cd7-2a795bebfa45",
+              "__enabled": true,
+              "Flags": 0,
+              "ColliderFlags": 0,
+              "Elasticity": null,
+              "Friction": null,
+              "IsTrigger": false,
+              "Model": "models/stool/opm0014.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "RollingResistance": null,
+              "Static": true,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "ChairHandIk",
+              "__guid": "532cc864-a7aa-4c39-a2a0-c25a43741dec",
+              "__enabled": true,
+              "Flags": 0,
+              "ApplyHandPose": true,
+              "Button": {
+                "_type": "gameobject",
+                "go": "ff4d8f82-74f6-4041-a786-47df13b9f5f8"
+              },
+              "HandPose": 0.02,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "TargetOffset": "0,0,0",
+              "UseLeftHand": false
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "6c19982e-11ce-426b-a4cf-bd163dbade43",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "exit",
+          "Position": "-26.9265976,0,9.35583878",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "9839a22e-1b12-4421-8de5-91843447ccdc",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "stool2",
+      "Position": "167.869293,251.828674,-5.52162457",
+      "Rotation": "0,0,-0.986154139,0.165831029",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -5773,6 +6038,26 @@
           "Static": false,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "ChairHandIk",
+          "__guid": "7ec5613e-30e2-4726-98c7-7fa521476b02",
+          "__enabled": true,
+          "Flags": 0,
+          "ApplyHandPose": true,
+          "Button": {
+            "_type": "gameobject",
+            "go": "554ae405-e2fe-401a-915d-5323afd96bae"
+          },
+          "HandPose": 0.02,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "TargetOffset": "0,0,8",
+          "UseLeftHand": false
         }
       ],
       "Children": [
@@ -5925,237 +6210,12 @@
       ]
     },
     {
-      "__guid": "ab6f32d9-ee1d-4747-9e04-6e945461321a",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "stool1 (1)",
-      "Position": "167.694504,303.990601,-0.018560417",
-      "Rotation": "0,0,-0.965925694,0.258819878",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.BaseChair",
-          "__guid": "b6dd6479-b3d6-48ee-a092-8a41a9881d87",
-          "__enabled": true,
-          "Flags": 0,
-          "ExitPoints": [
-            {
-              "_type": "gameobject",
-              "go": "6c19982e-11ce-426b-a4cf-bd163dbade43"
-            }
-          ],
-          "EyePosition": {
-            "_type": "gameobject",
-            "go": "8b5fb79e-eaf9-4274-8701-adfd68ee362d"
-          },
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "PitchRange": "-50,70",
-          "SeatPosition": {
-            "_type": "gameobject",
-            "go": "9734dc1a-ea85-41de-b18f-240de236a8cc"
-          },
-          "SitHeight": 0,
-          "SitPose": "Chair",
-          "TooltipDescription": "",
-          "TooltipIcon": "airline_seat_recline_normal",
-          "TooltipTitle": "Sit",
-          "YawRange": "-180,180"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "997e8f01-371f-4866-9d95-fff63ce9cd8c",
-          "__enabled": true,
-          "Flags": 0,
-          "Center": "0,0,25",
-          "ColliderFlags": 0,
-          "Elasticity": null,
-          "Friction": null,
-          "IsTrigger": true,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "RollingResistance": null,
-          "Scale": "25,25,50",
-          "Static": false,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "9734dc1a-ea85-41de-b18f-240de236a8cc",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "seat",
-          "Position": "1.27643776,0,22.3894348",
-          "Rotation": "0,0,0,1",
-          "Scale": "1,1,1",
-          "Tags": "",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "8b5fb79e-eaf9-4274-8701-adfd68ee362d",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "eye",
-          "Position": "0,0,71.5143433",
-          "Rotation": "0,0,0,1",
-          "Scale": "1,1,1",
-          "Tags": "",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "17df9e0e-56f0-4c2f-9e8a-9708bfcebab2",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "opm0014 (1)",
-          "Position": "0,0,0",
-          "Rotation": "0,0,0.427279234,0.90411973",
-          "Scale": "0.5,0.5,0.75",
-          "Tags": "",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [
-            {
-              "__type": "Sandbox.Prop",
-              "__guid": "5d78daa8-0303-4b30-9288-673778cb40c7",
-              "__enabled": true,
-              "Flags": 0,
-              "BodyGroups": 18446744073709551615,
-              "Health": 0,
-              "IsStatic": true,
-              "MaterialGroup": null,
-              "Model": "models/stool/opm0014.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnPropBreak": null,
-              "OnPropTakeDamage": null,
-              "StartAsleep": false,
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "489b393b-70cb-446a-aaf9-896ec43dbeb5",
-              "__enabled": true,
-              "Flags": 0,
-              "BodyGroups": 18446744073709551615,
-              "CreateAttachments": false,
-              "LodOverride": null,
-              "MaterialGroup": null,
-              "MaterialOverride": "materials/pacefunch-red.vmat",
-              "Materials": null,
-              "Model": "models/stool/opm0014.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "bdb568ea-3adb-4acb-8cd7-2a795bebfa45",
-              "__enabled": true,
-              "Flags": 0,
-              "ColliderFlags": 0,
-              "Elasticity": null,
-              "Friction": null,
-              "IsTrigger": false,
-              "Model": "models/stool/opm0014.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "RollingResistance": null,
-              "Static": true,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "6c19982e-11ce-426b-a4cf-bd163dbade43",
-          "__version": 2,
-          "Flags": 0,
-          "Name": "exit",
-          "Position": "-26.9265976,0,9.35583878",
-          "Rotation": "0,0,0,1",
-          "Scale": "1,1,1",
-          "Tags": "",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
-          "NetworkTransmit": true,
-          "OwnerTransfer": 1,
-          "Components": [],
-          "Children": []
-        }
-      ]
-    },
-    {
       "__guid": "31727bec-801e-4579-a198-760910c788ba",
       "__version": 2,
       "Flags": 0,
-      "Name": "stool1 (2)",
-      "Position": "188.386917,201.079041,0.00397298485",
-      "Rotation": "0,0,-1.00000012,-8.49366188E-07",
+      "Name": "stool3",
+      "Position": "180.126785,199.539291,-5.49909019",
+      "Rotation": "0,0,-0.999362946,0.0356923528",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -6223,6 +6283,26 @@
           "Static": false,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "ChairHandIk",
+          "__guid": "d8f658ae-470e-49d1-b76f-2197260fa9b2",
+          "__enabled": true,
+          "Flags": 0,
+          "ApplyHandPose": true,
+          "Button": {
+            "_type": "gameobject",
+            "go": "becdd9fa-20c2-456b-ac8f-7664a85afba3"
+          },
+          "HandPose": 0.02,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "TargetOffset": "0,0,8",
+          "UseLeftHand": false
         }
       ],
       "Children": [
@@ -6378,9 +6458,9 @@
       "__guid": "2b2b5a0c-8b09-4157-882f-3de571d5ac17",
       "__version": 2,
       "Flags": 0,
-      "Name": "stool1 (3)",
-      "Position": "93.3070908,175.602448,0.00397296995",
-      "Rotation": "0,0,-0.258819163,-0.965925753",
+      "Name": "stool4",
+      "Position": "106.044884,174.267838,-5.49909449",
+      "Rotation": "0,0,-0.233707249,-0.972307026",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -6448,6 +6528,26 @@
           "Static": false,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "ChairHandIk",
+          "__guid": "1d5ddfed-9f97-4121-a36a-2acd74cb910f",
+          "__enabled": true,
+          "Flags": 0,
+          "ApplyHandPose": true,
+          "Button": {
+            "_type": "gameobject",
+            "go": "3fe42ff3-ec26-4961-90d2-8b8b6e158e7f"
+          },
+          "HandPose": 0.02,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "TargetOffset": "0,0,8",
+          "UseLeftHand": false
         }
       ],
       "Children": [
@@ -6575,6 +6675,26 @@
               "Static": true,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "ChairHandIk",
+              "__guid": "5a174e80-66c2-4d0c-8dda-601bb2f255fc",
+              "__enabled": true,
+              "Flags": 0,
+              "ApplyHandPose": true,
+              "Button": {
+                "_type": "gameobject",
+                "go": "3fe42ff3-ec26-4961-90d2-8b8b6e158e7f"
+              },
+              "HandPose": 0.02,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "TargetOffset": "0,0,0",
+              "UseLeftHand": false
             }
           ],
           "Children": []
@@ -6603,9 +6723,9 @@
       "__guid": "54d07bc3-c8ee-4a7a-9f05-2fc287b3af80",
       "__version": 2,
       "Flags": 0,
-      "Name": "stool1 (4)",
-      "Position": "70.6306534,228.801636,0.00397296995",
-      "Rotation": "0,0,-0.130525604,-0.991445184",
+      "Name": "stool5",
+      "Position": "89.4504089,229.272614,-5.49909449",
+      "Rotation": "0,0,-0.104795605,-0.994494021",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -6673,6 +6793,26 @@
           "Static": false,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "ChairHandIk",
+          "__guid": "2ece9a05-c86a-48ab-b537-855f371cdb7b",
+          "__enabled": true,
+          "Flags": 0,
+          "ApplyHandPose": true,
+          "Button": {
+            "_type": "gameobject",
+            "go": "13635867-3261-485c-b869-bc6668a8c929"
+          },
+          "HandPose": 0.02,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "TargetOffset": "0,0,8",
+          "UseLeftHand": false
         }
       ],
       "Children": [
@@ -6800,6 +6940,26 @@
               "Static": true,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "ChairHandIk",
+              "__guid": "1fcc7dec-d686-4ad5-89e8-3995ba9c58c0",
+              "__enabled": true,
+              "Flags": 0,
+              "ApplyHandPose": true,
+              "Button": {
+                "_type": "gameobject",
+                "go": "13635867-3261-485c-b869-bc6668a8c929"
+              },
+              "HandPose": 0.02,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "TargetOffset": "0,0,0",
+              "UseLeftHand": false
             }
           ],
           "Children": []
@@ -6828,9 +6988,9 @@
       "__guid": "4c4c512a-af0a-4baf-94e9-f582dfaac49d",
       "__version": 2,
       "Flags": 0,
-      "Name": "stool1 (5)",
-      "Position": "60.6324997,286.815857,0.00397296995",
-      "Rotation": "0,0,1.02818012E-06,-1.00000036",
+      "Name": "stool6",
+      "Position": "78.8527603,280.815613,-5.49909449",
+      "Rotation": "0,0,0.0259088669,-0.999664724",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -6898,6 +7058,26 @@
           "Static": false,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "ChairHandIk",
+          "__guid": "7467c9a7-7663-4067-bc76-f9966aa65653",
+          "__enabled": true,
+          "Flags": 0,
+          "ApplyHandPose": true,
+          "Button": {
+            "_type": "gameobject",
+            "go": "3cb5ae4a-9558-4c8c-bd31-5afe829164bd"
+          },
+          "HandPose": 0.02,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "TargetOffset": "0,0,8",
+          "UseLeftHand": false
         }
       ],
       "Children": [
@@ -7025,6 +7205,26 @@
               "Static": true,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "ChairHandIk",
+              "__guid": "49e1ee45-bb4f-4651-9499-16df9a15cb57",
+              "__enabled": true,
+              "Flags": 0,
+              "ApplyHandPose": true,
+              "Button": {
+                "_type": "gameobject",
+                "go": "3cb5ae4a-9558-4c8c-bd31-5afe829164bd"
+              },
+              "HandPose": 0.02,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "TargetOffset": "0,0,0",
+              "UseLeftHand": false
             }
           ],
           "Children": []
@@ -9002,6 +9202,1524 @@
           "Children": []
         }
       ]
+    },
+    {
+      "__guid": "ff4d8f82-74f6-4041-a786-47df13b9f5f8",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "button1",
+      "Position": "136.83403,300.784058,40.2686501",
+      "Rotation": "0,0,0.98810792,-0.153761968",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "4eea8b37-bf4b-4392-a250-6b7e291f1394",
+          "__enabled": true,
+          "Flags": 0,
+          "AnimationGraph": null,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/props/big_button/big_button_2.vmdl",
+          "Morphs": {},
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null,
+            "Looping": true,
+            "Blending": false
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "3fbe5039-d050-4933-aa8d-06622b4d7fb1",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Line",
+          "Position": "-72.9419479,-49.1472397,83.066185",
+          "Rotation": "0,0,-0.5,0.866025448",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.LineRenderer",
+              "__guid": "6578f91f-4afe-4935-ae49-3559e1507e36",
+              "__enabled": true,
+              "Flags": 0,
+              "Additive": false,
+              "AutoCalculateNormals": true,
+              "CastShadows": true,
+              "Color": {
+                "blend": "Linear",
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "0.12941,0.12157,0.09804,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "CylinderSegments": 12,
+              "DepthFeather": 0,
+              "EndCap": "Rounded",
+              "Face": "Camera",
+              "FogStrength": 1,
+              "Lighting": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": false,
+              "Points": [
+                {
+                  "_type": "gameobject",
+                  "go": "ff4d8f82-74f6-4041-a786-47df13b9f5f8"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "b2c08153-d0d7-4b4b-8486-2fbd2f27f781"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "e1d8d673-f214-4675-9ffb-7a4c067ddd74"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "d79ac272-274e-4d2f-8aa3-9cbfd9940177"
+                }
+              ],
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "SplineBias": 0,
+              "SplineContinuity": 0,
+              "SplineInterpolation": 16,
+              "SplineTension": 0.5,
+              "StartCap": "Rounded",
+              "Texturing": {
+                "Texture": null,
+                "Material": null,
+                "WorldSpace": true,
+                "UnitsPerTexture": 10,
+                "Scale": 1,
+                "Offset": 0,
+                "Scroll": 0,
+                "FilterMode": "Anisotropic",
+                "TextureAddressMode": "Wrap",
+                "Clamp": false
+              },
+              "UseVectorPoints": false,
+              "VectorPoints": [],
+              "Width": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Wireframe": false
+            }
+          ],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "554ae405-e2fe-401a-915d-5323afd96bae",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "button2",
+      "Position": "148.047333,254.485641,40.2686615",
+      "Rotation": "0,0,0.995491922,-0.0948468596",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "ad37844a-b60e-44b4-b76c-b2bb7b70d189",
+          "__enabled": true,
+          "Flags": 0,
+          "AnimationGraph": null,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/props/big_button/big_button_2.vmdl",
+          "Morphs": {},
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null,
+            "Looping": true,
+            "Blending": false
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "d967ca28-9087-42da-84f7-6d68d0aa2b5f",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Line",
+          "Position": "-33.635273,-27.0555019,83.0661163",
+          "Rotation": "0,0,-0.382682681,0.923879564",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.LineRenderer",
+              "__guid": "15fe3395-abb4-4d31-a95d-4ac11fb24d16",
+              "__enabled": true,
+              "Flags": 0,
+              "Additive": false,
+              "AutoCalculateNormals": true,
+              "CastShadows": true,
+              "Color": {
+                "blend": "Linear",
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "0.12941,0.12157,0.09804,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "CylinderSegments": 12,
+              "DepthFeather": 0,
+              "EndCap": "Rounded",
+              "Face": "Camera",
+              "FogStrength": 1,
+              "Lighting": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": false,
+              "Points": [
+                {
+                  "_type": "gameobject",
+                  "go": "554ae405-e2fe-401a-915d-5323afd96bae"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "a5485252-8034-4728-945d-3622211c3fbc"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "df1d561a-c7bc-4a64-8dad-0e48cbf6aafa"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "7325a920-4b28-4ab6-a278-afa608b084f7"
+                }
+              ],
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "SplineBias": 0,
+              "SplineContinuity": 0,
+              "SplineInterpolation": 16,
+              "SplineTension": 0.5,
+              "StartCap": "Rounded",
+              "Texturing": {
+                "Texture": null,
+                "Material": null,
+                "WorldSpace": true,
+                "UnitsPerTexture": 10,
+                "Scale": 1,
+                "Offset": 0,
+                "Scroll": 0,
+                "FilterMode": "Anisotropic",
+                "TextureAddressMode": "Wrap",
+                "Clamp": false
+              },
+              "UseVectorPoints": false,
+              "VectorPoints": [],
+              "Width": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Wireframe": false
+            }
+          ],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "becdd9fa-20c2-456b-ac8f-7664a85afba3",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "button3",
+      "Position": "161.59082,203.716385,40.2686615",
+      "Rotation": "0,0,0.98810792,-0.153761968",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "2de00ad7-d86c-4f3a-8bbb-aa9618fceebf",
+          "__enabled": true,
+          "Flags": 0,
+          "AnimationGraph": null,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/props/big_button/big_button_2.vmdl",
+          "Morphs": {},
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null,
+            "Looping": true,
+            "Blending": false
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "5675b6c6-fb52-4569-afa0-fffc9a29fd56",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Line",
+          "Position": "-24.0955162,12.8714151,83.0661392",
+          "Rotation": "0,0,0.0960441083,0.995376825",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.LineRenderer",
+              "__guid": "09496a8f-2685-4225-a04f-ebd29304a36f",
+              "__enabled": true,
+              "Flags": 0,
+              "Additive": false,
+              "AutoCalculateNormals": true,
+              "CastShadows": true,
+              "Color": {
+                "blend": "Linear",
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "0.12941,0.12157,0.09804,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "CylinderSegments": 12,
+              "DepthFeather": 0,
+              "EndCap": "Rounded",
+              "Face": "Camera",
+              "FogStrength": 1,
+              "Lighting": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": false,
+              "Points": [
+                {
+                  "_type": "gameobject",
+                  "go": "becdd9fa-20c2-456b-ac8f-7664a85afba3"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "5102440f-8457-4785-b228-ea4f5b679ebf"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "c7daf4d2-857a-40a2-b102-1cf3e08f1a6f"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "ab137ba1-ba01-401b-8fe1-828c1635112f"
+                }
+              ],
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "SplineBias": 0,
+              "SplineContinuity": 0,
+              "SplineInterpolation": 16,
+              "SplineTension": 0.5,
+              "StartCap": "Rounded",
+              "Texturing": {
+                "Texture": null,
+                "Material": null,
+                "WorldSpace": true,
+                "UnitsPerTexture": 10,
+                "Scale": 1,
+                "Offset": 0,
+                "Scroll": 0,
+                "FilterMode": "Anisotropic",
+                "TextureAddressMode": "Wrap",
+                "Clamp": false
+              },
+              "UseVectorPoints": false,
+              "VectorPoints": [],
+              "Width": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Wireframe": false
+            }
+          ],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "3fe42ff3-ec26-4961-90d2-8b8b6e158e7f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "button4",
+      "Position": "121.861664,172.818039,40.2686462",
+      "Rotation": "0,0,0.17596817,0.984395862",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "270a607c-8b16-4fcb-8639-6475720cb547",
+          "__enabled": true,
+          "Flags": 0,
+          "AnimationGraph": null,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/props/big_button/big_button_2.vmdl",
+          "Morphs": {},
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null,
+            "Looping": true,
+            "Blending": false
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "9a1d9e3f-f20b-4c47-87ce-d1db870152a8",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Line",
+          "Position": "38.5011215,3.21518612,83.0661163",
+          "Rotation": "0,0,-0.382682651,0.923879504",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.LineRenderer",
+              "__guid": "4d3d4378-47e7-4d74-8b31-e41bd17e22bb",
+              "__enabled": true,
+              "Flags": 0,
+              "Additive": false,
+              "AutoCalculateNormals": true,
+              "CastShadows": true,
+              "Color": {
+                "blend": "Linear",
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "0.12941,0.12157,0.09804,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "CylinderSegments": 12,
+              "DepthFeather": 0,
+              "EndCap": "Rounded",
+              "Face": "Camera",
+              "FogStrength": 1,
+              "Lighting": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": false,
+              "Points": [
+                {
+                  "_type": "gameobject",
+                  "go": "3fe42ff3-ec26-4961-90d2-8b8b6e158e7f"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "10b14ade-704d-4fd7-b94b-df4e90ce248f"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "65af44ce-4e3f-4bae-a074-090d878ad9d2"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "26b75b9d-e4ad-426a-86a5-a9dea5cf7b06"
+                }
+              ],
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "SplineBias": 0,
+              "SplineContinuity": 0,
+              "SplineInterpolation": 16,
+              "SplineTension": 0.5,
+              "StartCap": "Rounded",
+              "Texturing": {
+                "Texture": null,
+                "Material": null,
+                "WorldSpace": true,
+                "UnitsPerTexture": 10,
+                "Scale": 1,
+                "Offset": 0,
+                "Scroll": 0,
+                "FilterMode": "Anisotropic",
+                "TextureAddressMode": "Wrap",
+                "Clamp": false
+              },
+              "UseVectorPoints": false,
+              "VectorPoints": [],
+              "Width": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Wireframe": false
+            }
+          ],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "13635867-3261-485c-b869-bc6668a8c929",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "button5",
+      "Position": "106.014206,229.947693,40.2686424",
+      "Rotation": "0,0,0.153761283,0.988108039",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "c887231d-140b-44a0-96d0-17a86f0802cb",
+          "__enabled": true,
+          "Flags": 0,
+          "AnimationGraph": null,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/props/big_button/big_button_2.vmdl",
+          "Morphs": {},
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null,
+            "Looping": true,
+            "Blending": false
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "cc31073e-7729-4c80-8c26-723c0f7c8af0",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Line",
+          "Position": "45.0009155,0.572068214,83.0661163",
+          "Rotation": "0,0,0.258819669,0.965925336",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.LineRenderer",
+              "__guid": "80996c5d-4a7b-47fc-a68c-2fecf314b8a8",
+              "__enabled": true,
+              "Flags": 0,
+              "Additive": false,
+              "AutoCalculateNormals": true,
+              "CastShadows": true,
+              "Color": {
+                "blend": "Linear",
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "0.12941,0.12157,0.09804,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "CylinderSegments": 12,
+              "DepthFeather": 0,
+              "EndCap": "Rounded",
+              "Face": "Camera",
+              "FogStrength": 1,
+              "Lighting": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": false,
+              "Points": [
+                {
+                  "_type": "gameobject",
+                  "go": "13635867-3261-485c-b869-bc6668a8c929"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "22aeec9d-ef12-422d-9c81-65d8eb52dfb4"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "f1d5e940-88b5-4eaf-a1a1-9473882bc3cc"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "dc736608-bcc3-441d-8214-01c718657b03"
+                }
+              ],
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "SplineBias": 0,
+              "SplineContinuity": 0,
+              "SplineInterpolation": 16,
+              "SplineTension": 0.5,
+              "StartCap": "Rounded",
+              "Texturing": {
+                "Texture": null,
+                "Material": null,
+                "WorldSpace": true,
+                "UnitsPerTexture": 10,
+                "Scale": 1,
+                "Offset": 0,
+                "Scroll": 0,
+                "FilterMode": "Anisotropic",
+                "TextureAddressMode": "Wrap",
+                "Clamp": false
+              },
+              "UseVectorPoints": false,
+              "VectorPoints": [],
+              "Width": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Wireframe": false
+            }
+          ],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "3cb5ae4a-9558-4c8c-bd31-5afe829164bd",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "button6",
+      "Position": "95.1010742,276.972504,40.2686348",
+      "Rotation": "0,0,0.105743445,0.994393468",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "964f8a86-369c-4dc6-ad82-c336b27a9f3f",
+          "__enabled": true,
+          "Flags": 0,
+          "AnimationGraph": null,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/props/big_button/big_button_2.vmdl",
+          "Morphs": {},
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null,
+            "Looping": true,
+            "Blending": false
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "3da60589-2552-40e0-b0ac-13555d220b51",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Line",
+          "Position": "54.3766403,-84.2230225,83.0661621",
+          "Rotation": "0,0,0,0.999999821",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.LineRenderer",
+              "__guid": "91e76d87-76a3-4698-bb69-2d09e1cb868d",
+              "__enabled": true,
+              "Flags": 0,
+              "Additive": false,
+              "AutoCalculateNormals": true,
+              "CastShadows": true,
+              "Color": {
+                "blend": "Linear",
+                "color": [
+                  {
+                    "t": 0.5,
+                    "c": "0.12941,0.12157,0.09804,1"
+                  }
+                ],
+                "alpha": []
+              },
+              "CylinderSegments": 12,
+              "DepthFeather": 0,
+              "EndCap": "Rounded",
+              "Face": "Camera",
+              "FogStrength": 1,
+              "Lighting": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opaque": false,
+              "Points": [
+                {
+                  "_type": "gameobject",
+                  "go": "3cb5ae4a-9558-4c8c-bd31-5afe829164bd"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "53f736c6-8d98-4dd0-ac1c-6e526c69f145"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "58376947-b7fc-4cc3-87a7-4f6604b7b09c"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "c63e0071-71d6-4ef8-8fe6-e984b7247449"
+                }
+              ],
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "SplineBias": 0,
+              "SplineContinuity": 0,
+              "SplineInterpolation": 16,
+              "SplineTension": 0.5,
+              "StartCap": "Rounded",
+              "Texturing": {
+                "Texture": null,
+                "Material": null,
+                "WorldSpace": true,
+                "UnitsPerTexture": 10,
+                "Scale": 1,
+                "Offset": 0,
+                "Scroll": 0,
+                "FilterMode": "Anisotropic",
+                "TextureAddressMode": "Wrap",
+                "Clamp": false
+              },
+              "UseVectorPoints": false,
+              "VectorPoints": [],
+              "Width": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "in": 0,
+                  "out": 0,
+                  "mode": "Mirrored"
+                }
+              ],
+              "Wireframe": false
+            }
+          ],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "e225e31f-d70f-4706-b79c-199bf0980cd7",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "BuzzerGameScreen",
+      "Position": "151.971008,328.770416,62.1977921",
+      "Rotation": "0,0,-0.60876137,0.793353319",
+      "Scale": "0.0299999993,0.0299999993,0.0299999993",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 1,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 0,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c521ff2e-f6a6-4e76-8468-823fb26fa217",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Materials": null,
+          "Model": "models/basic-monitor/monitor.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "0.05116,0.04855,0.04855,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "da88beca-9bc9-4626-b052-8b4c7c5a2583",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "-50,-1575,0",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "200,2000,1150",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "e0144a98-c1c0-4373-8495-41cfda691c45",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "HotBuzzer",
+          "Position": "24.3214931,-1582.05872,27.363842",
+          "Rotation": "0,0,-2.52881136E-07,1",
+          "Scale": "33.3333359,33.3333359,33.3333359",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.WorldPanel",
+              "__guid": "af8a93f1-1b5f-4f19-81e4-b4ce66798b40",
+              "__enabled": true,
+              "Flags": 0,
+              "HorizontalAlign": "Center",
+              "InteractionRange": 1000,
+              "LookAtCamera": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "PanelSize": "1065,615",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderScale": 1,
+              "VerticalAlign": "Center"
+            },
+            {
+              "__type": "Sandbox.HotBuzzerPanel",
+              "__guid": "912128c9-a053-4b27-9436-dc46cda260c4",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            },
+            {
+              "__type": "HotBuzzer",
+              "__guid": "dce7e8cc-237d-448e-8708-5175cb0f0c31",
+              "__enabled": true,
+              "Flags": 0,
+              "Chairs": [
+                {
+                  "_type": "gameobject",
+                  "go": "9839a22e-1b12-4421-8de5-91843447ccdc"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "ab6f32d9-ee1d-4747-9e04-6e945461321a"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "31727bec-801e-4579-a198-760910c788ba"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "2b2b5a0c-8b09-4157-882f-3de571d5ac17"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "54d07bc3-c8ee-4a7a-9f05-2fc287b3af80"
+                },
+                {
+                  "_type": "gameobject",
+                  "go": "4c4c512a-af0a-4baf-94e9-f582dfaac49d"
+                }
+              ],
+              "CorrectSound": "sounds/kenney/ui/ui.favourite.sound",
+              "CorrectSoundDelay": 0.5,
+              "FailSound": "sounds/buzzwrong.sound",
+              "LeftSound": "sounds/leftbuzz.sound",
+              "MinPlayers": 1,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Panel": {
+                "_type": "component",
+                "component_id": "912128c9-a053-4b27-9436-dc46cda260c4",
+                "go": "e0144a98-c1c0-4373-8495-41cfda691c45",
+                "component_type": "HotBuzzerPanel"
+              },
+              "ReplayInterval": 0.5,
+              "ReplayStartDelay": 0.8,
+              "RightSound": "sounds/rightbuzz.sound"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "65af44ce-4e3f-4bae-a074-090d878ad9d2",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBottom1",
+          "Position": "-143.642487,-1816.83606,-682.878784",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "26b75b9d-e4ad-426a-86a5-a9dea5cf7b06",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBack1",
+          "Position": "-80.3863525,-1816.83459,92.8761978",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "f1d5e940-88b5-4eaf-a1a1-9473882bc3cc",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBottom2",
+          "Position": "-143.642181,-1987.65283,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "dc736608-bcc3-441d-8214-01c718657b03",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBack2",
+          "Position": "-80.0001144,-1987.65247,53.3720741",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "58376947-b7fc-4cc3-87a7-4f6604b7b09c",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBottom3",
+          "Position": "-143.643326,-2170.13086,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "c63e0071-71d6-4ef8-8fe6-e984b7247449",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBack3",
+          "Position": "-79.9999237,-2170.13086,118.146027",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "c7daf4d2-857a-40a2-b102-1cf3e08f1a6f",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBottom4",
+          "Position": "-143.643448,-1312.44458,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "ab137ba1-ba01-401b-8fe1-828c1635112f",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBack4",
+          "Position": "-80.0012589,-1312.44446,85.1130371",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "df1d561a-c7bc-4a64-8dad-0e48cbf6aafa",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBottom5",
+          "Position": "-143.643951,-1142.34058,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "7325a920-4b28-4ab6-a278-afa608b084f7",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBack5",
+          "Position": "-79.9995117,-1142.33984,47.6196365",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "e1d8d673-f214-4675-9ffb-7a4c067ddd74",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBottom6",
+          "Position": "-143.644394,-874.401611,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "d79ac272-274e-4d2f-8aa3-9cbfd9940177",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireBack6",
+          "Position": "-80.0018997,-874.40033,107.301857",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "b2c08153-d0d7-4b4b-8486-2fbd2f27f781",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireTable6",
+          "Position": "586.513489,-944.783813,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "10b14ade-704d-4fd7-b94b-df4e90ce248f",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireTable1",
+          "Position": "4312.75244,-1830.86353,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "22aeec9d-ef12-422d-9c81-65d8eb52dfb4",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireTable2",
+          "Position": "2678.17676,-2021.66199,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "53f736c6-8d98-4dd0-ac1c-6e526c69f145",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireTable3",
+          "Position": "348.191284,-2133.84497,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "a5485252-8034-4728-945d-3622211c3fbc",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireTable5",
+          "Position": "2034.75037,-1130.81165,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        },
+        {
+          "__guid": "5102440f-8457-4785-b228-ea4f5b679ebf",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "WireTable4",
+          "Position": "4025.29761,-1360.61548,-682.878784",
+          "Rotation": "0,0,-2.98023224E-08,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": []
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -9035,6 +10753,7 @@
   "Title": null,
   "Description": null,
   "__references": [
+    "facepunch.big_button_2#141959",
     "facepunch.cableatint#92362",
     "facepunch.carpet_b#85498",
     "facepunch.ceiling_halogen#29025",
