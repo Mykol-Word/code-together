@@ -12897,7 +12897,7 @@
                     "BloomLayer": false,
                     "AfterUILayer": false
                   },
-                  "RenderType": "On",
+                  "RenderType": "Off",
                   "Tint": "1,0.83256,0.83256,1"
                 },
                 {
@@ -12969,7 +12969,7 @@
                     "BloomLayer": false,
                     "AfterUILayer": false
                   },
-                  "RenderType": "On",
+                  "RenderType": "Off",
                   "Tint": "1,0.83256,0.83256,1"
                 },
                 {
@@ -13041,7 +13041,7 @@
                     "BloomLayer": false,
                     "AfterUILayer": false
                   },
-                  "RenderType": "On",
+                  "RenderType": "Off",
                   "Tint": "1,0.83256,0.83256,1"
                 },
                 {
@@ -13113,7 +13113,7 @@
                     "BloomLayer": false,
                     "AfterUILayer": false
                   },
-                  "RenderType": "On",
+                  "RenderType": "Off",
                   "Tint": "1,0.83256,0.83256,1"
                 },
                 {
@@ -13185,7 +13185,7 @@
                     "BloomLayer": false,
                     "AfterUILayer": false
                   },
-                  "RenderType": "On",
+                  "RenderType": "Off",
                   "Tint": "1,0.83256,0.83256,1"
                 },
                 {
@@ -13257,7 +13257,7 @@
                     "BloomLayer": false,
                     "AfterUILayer": false
                   },
-                  "RenderType": "On",
+                  "RenderType": "Off",
                   "Tint": "1,0.83256,0.83256,1"
                 },
                 {
@@ -21002,6 +21002,11 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "c8c10add-5962-4d9d-b220-b285e115a5e8"
+        }
+      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
