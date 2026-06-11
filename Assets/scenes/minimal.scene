@@ -10793,6 +10793,14 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
+                    },
+                    "Property": "RetryInterval",
+                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -10886,6 +10894,14 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
+                    },
+                    "Property": "RetryInterval",
+                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -10988,6 +11004,14 @@
                       "Type": "Component",
                       "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
                     },
+                    "Property": "FalloffRadius",
+                    "Value": 20
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
+                    },
                     "Property": "TargetYaw",
                     "Value": 0
                   }
@@ -11031,6 +11055,14 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
+                    },
+                    "Property": "FalloffRadius",
+                    "Value": 20
                   },
                   {
                     "Target": {
@@ -11099,6 +11131,14 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
+                    },
+                    "Property": "FalloffRadius",
+                    "Value": 20
                   }
                 ],
                 "MovedObjects": []
@@ -11132,6 +11172,14 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
+                    },
+                    "Property": "FalloffRadius",
+                    "Value": 20
                   }
                 ],
                 "MovedObjects": []
@@ -11262,6 +11310,14 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
+                    },
+                    "Property": "RetryInterval",
+                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -11347,6 +11403,14 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
+                    },
+                    "Property": "RetryInterval",
+                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -11819,6 +11883,14 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
+                    },
+                    "Property": "RetryInterval",
+                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -11912,6 +11984,14 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
+                    },
+                    "Property": "RetryInterval",
+                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -12006,6 +12086,14 @@
                       "Type": "Component",
                       "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
                     },
+                    "Property": "FalloffRadius",
+                    "Value": 20
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
+                    },
                     "Property": "TargetYaw",
                     "Value": 0
                   }
@@ -12049,6 +12137,14 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
+                    },
+                    "Property": "FalloffRadius",
+                    "Value": 20
                   },
                   {
                     "Target": {
@@ -12117,6 +12213,14 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
+                    },
+                    "Property": "FalloffRadius",
+                    "Value": 20
                   }
                 ],
                 "MovedObjects": []
@@ -12150,6 +12254,14 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
+                    },
+                    "Property": "FalloffRadius",
+                    "Value": 20
                   }
                 ],
                 "MovedObjects": []
@@ -12288,6 +12400,14 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
+                    },
+                    "Property": "RetryInterval",
+                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -12373,6 +12493,14 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
+                    },
+                    "Property": "RetryInterval",
+                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -13689,7 +13817,7 @@
             },
             {
               "__type": "ChairHandIk",
-              "__guid": "059b8a08-7ffb-490b-8d6c-5ddd60ba79b8",
+              "__guid": "07d1f2c1-047c-4615-8202-c041eb709344",
               "__enabled": true,
               "Flags": 0,
               "ApplyHandPose": true,
@@ -13836,7 +13964,7 @@
                 },
                 {
                   "__type": "ChairHandIk",
-                  "__guid": "532cc864-a7aa-4c39-a2a0-c25a43741dec",
+                  "__guid": "e0ab1f54-f92d-4c69-8c99-ab0bc8febd11",
                   "__enabled": true,
                   "Flags": 0,
                   "ApplyHandPose": true,
@@ -13954,7 +14082,7 @@
             },
             {
               "__type": "ChairHandIk",
-              "__guid": "7ec5613e-30e2-4726-98c7-7fa521476b02",
+              "__guid": "2106a089-df03-499d-b6b8-2ae967960cf5",
               "__enabled": true,
               "Flags": 0,
               "ApplyHandPose": true,
@@ -14199,7 +14327,7 @@
             },
             {
               "__type": "ChairHandIk",
-              "__guid": "d8f658ae-470e-49d1-b76f-2197260fa9b2",
+              "__guid": "f8b5603a-321b-444a-97ee-2f124fa39ef2",
               "__enabled": true,
               "Flags": 0,
               "ApplyHandPose": true,
@@ -14444,7 +14572,7 @@
             },
             {
               "__type": "ChairHandIk",
-              "__guid": "1d5ddfed-9f97-4121-a36a-2acd74cb910f",
+              "__guid": "634ba343-1dff-4ba2-aa48-9b07fbf24b33",
               "__enabled": true,
               "Flags": 0,
               "ApplyHandPose": true,
@@ -14591,7 +14719,7 @@
                 },
                 {
                   "__type": "ChairHandIk",
-                  "__guid": "5a174e80-66c2-4d0c-8dda-601bb2f255fc",
+                  "__guid": "b505d0c7-b01d-4c38-8c3c-3d9d3d6e9c0c",
                   "__enabled": true,
                   "Flags": 0,
                   "ApplyHandPose": true,
@@ -14709,7 +14837,7 @@
             },
             {
               "__type": "ChairHandIk",
-              "__guid": "2ece9a05-c86a-48ab-b537-855f371cdb7b",
+              "__guid": "8fb8118e-cd4a-4259-8008-32bd30a3bc81",
               "__enabled": true,
               "Flags": 0,
               "ApplyHandPose": true,
@@ -14856,7 +14984,7 @@
                 },
                 {
                   "__type": "ChairHandIk",
-                  "__guid": "1fcc7dec-d686-4ad5-89e8-3995ba9c58c0",
+                  "__guid": "143c780c-edf6-429a-a5f7-08220cb0bab2",
                   "__enabled": true,
                   "Flags": 0,
                   "ApplyHandPose": true,
@@ -14974,7 +15102,7 @@
             },
             {
               "__type": "ChairHandIk",
-              "__guid": "7467c9a7-7663-4067-bc76-f9966aa65653",
+              "__guid": "a36b8cfd-61b4-4b7e-b58b-f0702778907e",
               "__enabled": true,
               "Flags": 0,
               "ApplyHandPose": true,
@@ -15121,7 +15249,7 @@
                 },
                 {
                   "__type": "ChairHandIk",
-                  "__guid": "49e1ee45-bb4f-4651-9499-16df9a15cb57",
+                  "__guid": "15e1cd06-d1fa-4a24-8edd-21efe584601d",
                   "__enabled": true,
                   "Flags": 0,
                   "ApplyHandPose": true,
@@ -16289,7 +16417,7 @@
                 },
                 {
                   "__type": "Sandbox.HotBuzzerPanel",
-                  "__guid": "912128c9-a053-4b27-9436-dc46cda260c4",
+                  "__guid": "0c96abb4-d310-44b9-a8fd-bd62a7021f84",
                   "__enabled": true,
                   "Flags": 0,
                   "OnComponentDestroy": null,
@@ -16301,7 +16429,7 @@
                 },
                 {
                   "__type": "HotBuzzer",
-                  "__guid": "dce7e8cc-237d-448e-8708-5175cb0f0c31",
+                  "__guid": "8499ff5f-abc0-4b42-80b9-57ae2599a48d",
                   "__enabled": true,
                   "Flags": 0,
                   "Chairs": [
@@ -16343,7 +16471,7 @@
                   "OnComponentUpdate": null,
                   "Panel": {
                     "_type": "component",
-                    "component_id": "912128c9-a053-4b27-9436-dc46cda260c4",
+                    "component_id": "0c96abb4-d310-44b9-a8fd-bd62a7021f84",
                     "go": "e0144a98-c1c0-4373-8495-41cfda691c45",
                     "component_type": "HotBuzzerPanel"
                   },
@@ -16891,7 +17019,8 @@
                   "OnComponentEnabled": null,
                   "OnComponentFixedUpdate": null,
                   "OnComponentStart": null,
-                  "OnComponentUpdate": null
+                  "OnComponentUpdate": null,
+                  "RetryInterval": 3
                 }
               ],
               "Children": []
@@ -18235,7 +18364,7 @@
             },
             {
               "__type": "GrassScatterer",
-              "__guid": "9c1c7f7f-7187-40f7-9b6c-01f85644f1ad",
+              "__guid": "d18d74a3-6b32-4faa-b360-749423f19e97",
               "__enabled": true,
               "Flags": 0,
               "BladeCount": 8000,
@@ -18463,7 +18592,7 @@
           "Components": [
             {
               "__type": "SoccerMinigame",
-              "__guid": "5b6af0aa-413b-40ee-b1d9-963eb4e6df69",
+              "__guid": "8c0401df-145d-42b1-9a0f-5b1887fa63f1",
               "__enabled": true,
               "Flags": 0,
               "Ball": {
@@ -18478,7 +18607,7 @@
               },
               "BlackLights": {
                 "_type": "component",
-                "component_id": "1732e568-26b1-4636-bf8f-e9babaa3c51e",
+                "component_id": "78595735-b8ad-4320-bcca-b33063b11e9c",
                 "go": "3df31ecb-4aeb-4c41-80f9-2b17aed72e8f",
                 "component_type": "GoalLightManager"
               },
@@ -18503,7 +18632,7 @@
               },
               "RedLights": {
                 "_type": "component",
-                "component_id": "2c7f34a0-c120-41c6-a656-724622fc838d",
+                "component_id": "28aa3eab-aefc-4750-8a4c-523991f471bd",
                 "go": "d60c6633-7d28-4036-b9a8-f0ea49c6e8b2",
                 "component_type": "GoalLightManager"
               },
@@ -18532,7 +18661,7 @@
           "Components": [
             {
               "__type": "GoalLightManager",
-              "__guid": "1732e568-26b1-4636-bf8f-e9babaa3c51e",
+              "__guid": "78595735-b8ad-4320-bcca-b33063b11e9c",
               "__enabled": true,
               "Flags": 0,
               "Lights": [
@@ -18724,7 +18853,7 @@
           "Components": [
             {
               "__type": "GoalLightManager",
-              "__guid": "2c7f34a0-c120-41c6-a656-724622fc838d",
+              "__guid": "28aa3eab-aefc-4750-8a4c-523991f471bd",
               "__enabled": true,
               "Flags": 0,
               "Lights": [
@@ -20270,6 +20399,562 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "1336ec9f-39d3-43f1-8713-a1ae9683efad",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "rendertoggle",
+      "Position": "-216.033752,37.0195465,61.5363731",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "RenderDisable",
+          "__guid": "4c288d5c-7638-4db1-96d1-6cbf08f701f1",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "ToggleKey": "P"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "487694a0-1d5f-4e7e-b72e-13b66498c825",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "outsidebuilding",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": []
+    },
+    {
+      "__guid": "6035a5ff-228b-48d2-b7ce-d0a4ade5c4f4",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "250,775.918579,-22.989048",
+      "Rotation": "0,0,0,1",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "927f6f7a-7a3c-4b96-9de3-8a5a231330b8",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "25fc1f9d-f4f8-4571-b2b6-dcd2850168b4",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (9)",
+      "Position": "250,775.918579,272",
+      "Rotation": "0,0,0,1",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "f632d3fb-1326-4eff-8dd3-b6bf547fe60e",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "21fbde5e-2b43-48f7-8e6d-3b033c0f61c6",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (1)",
+      "Position": "-273.298615,301,-22.989048",
+      "Rotation": "0,0,0.707106769,0.707106769",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b1f1c2aa-2541-4952-b1fd-d0d05135f1c7",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "bac66d42-525f-4d6a-97b1-d0269beea731",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (8)",
+      "Position": "-273.298615,301,272",
+      "Rotation": "0,0,0.707106769,0.707106769",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "2b9c32ea-f89c-429a-bc34-77b6b742df42",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "56caab8d-e02f-4d66-8020-5a87cb6c74ac",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (2)",
+      "Position": "775.511475,224,-22.989048",
+      "Rotation": "0.5,-0.5,0.499999881,0.499999881",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "c97ab2a1-87ed-4b5d-b820-87a09a05537c",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "8b3dc7b7-ddf7-417f-987a-ae509ccfc7cf",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (4)",
+      "Position": "775.511475,775.953613,-22.989048",
+      "Rotation": "0.5,-0.5,0.499999881,0.499999881",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "ec1c2407-0d53-41c0-8b3c-269ca4c4fa6e",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "5630cee5-56a5-49f2-8f09-b1a234c2755e",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (5)",
+      "Position": "277.562988,775.953613,-22.989048",
+      "Rotation": "0.5,-0.5,0.499999881,0.499999881",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "78e387cb-7246-497b-9547-190cb07fbf27",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "4f11f112-7a7b-4400-9fee-33c39559ec79",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (6)",
+      "Position": "-273.316681,775.953613,-22.989048",
+      "Rotation": "0.5,-0.5,0.499999881,0.499999881",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "830b569e-20e5-43d5-815b-161937e802c2",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "6f950692-3e98-4be1-85cc-91130373c769",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (7)",
+      "Position": "-276.390656,224,-22.989048",
+      "Rotation": "0.5,-0.5,0.499999881,0.499999881",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "b4e61714-f18c-4b8d-9d21-489e21dcb83e",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "a454c1bf-091a-48ec-b6ab-2272e9654c36",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (3)",
+      "Position": "775.511475,301,-22.989048",
+      "Rotation": "0,0,0.707106769,0.707106769",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "1c91582f-f300-4ff2-a324-4e678a91e987",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "fcf3ea32-33b2-4e42-9c1c-d1ae3116d7c4",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Cube (10)",
+      "Position": "775.511475,301,272",
+      "Rotation": "0,0,0.707106769,0.707106769",
+      "Scale": "20,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "db2e80b2-5033-4c27-a634-3af0cb329745",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/concrete/floor/concrete_polished_01.vmat",
+          "Materials": null,
+          "Model": "models/dev/box.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -20292,6 +20977,11 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "4c410c36-c591-4d96-a233-70b59e223d96"
+        }
+      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
@@ -20312,6 +21002,7 @@
     "facepunch.ceiling_light#29026",
     "facepunch.chocolate#143345",
     "facepunch.concrete_barrier#33663",
+    "facepunch.concrete_pol_01#28935",
     "facepunch.floor_grass_a#271842",
     "facepunch.glass_a#111263",
     "facepunch.granite_simple#85416",
