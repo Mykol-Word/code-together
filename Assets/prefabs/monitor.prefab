@@ -3,7 +3,7 @@
     "__guid": "59a4976a-7727-4104-ad7f-dbddd6346a39",
     "__version": 2,
     "Flags": 0,
-    "Name": "Monitor",
+    "Name": "monitor",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "0.0199999996,0.0199999996,0.0199999996",
@@ -11,7 +11,7 @@
     "Enabled": true,
     "NetworkMode": 1,
     "NetworkFlags": 0,
-    "NetworkOrphaned": 0,
+    "NetworkOrphaned": 3,
     "NetworkTransmit": true,
     "OwnerTransfer": 0,
     "Components": [
@@ -133,7 +133,8 @@
             "OnComponentEnabled": null,
             "OnComponentFixedUpdate": null,
             "OnComponentStart": null,
-            "OnComponentUpdate": null
+            "OnComponentUpdate": null,
+            "RetryInterval": 3
           }
         ],
         "Children": []
@@ -156,7 +157,28 @@
         "Components": [],
         "Children": []
       }
-    ]
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,

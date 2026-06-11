@@ -11,7 +11,7 @@
     "Enabled": true,
     "NetworkMode": 1,
     "NetworkFlags": 0,
-    "NetworkOrphaned": 0,
+    "NetworkOrphaned": 3,
     "NetworkTransmit": true,
     "OwnerTransfer": 0,
     "Components": [

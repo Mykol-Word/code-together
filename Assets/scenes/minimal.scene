@@ -16192,7 +16192,7 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
+          "NetworkOrphaned": 3,
           "NetworkTransmit": true,
           "OwnerTransfer": 0,
           "Components": [
@@ -16774,7 +16774,7 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
+          "NetworkOrphaned": 3,
           "NetworkTransmit": true,
           "OwnerTransfer": 0,
           "Components": [
@@ -18280,7 +18280,7 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
+          "NetworkOrphaned": 3,
           "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
@@ -18468,7 +18468,7 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
+          "NetworkOrphaned": 3,
           "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
@@ -18537,7 +18537,7 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
+          "NetworkOrphaned": 3,
           "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
@@ -18729,7 +18729,7 @@
           "Enabled": true,
           "NetworkMode": 1,
           "NetworkFlags": 0,
-          "NetworkOrphaned": 0,
+          "NetworkOrphaned": 3,
           "NetworkTransmit": true,
           "OwnerTransfer": 1,
           "Components": [
@@ -20808,61 +20808,6 @@
       ]
     },
     {
-      "__guid": "b3b6cbdc-abec-4d05-a6fc-0ee2066a145f",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "kiosktext",
-      "Position": "-209.853104,380.476562,53.773159",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [
-        {
-          "__type": "Sandbox.WorldPanel",
-          "__guid": "2a62cddc-c591-4dff-bf27-594274713d7a",
-          "__enabled": true,
-          "Flags": 0,
-          "HorizontalAlign": "Center",
-          "InteractionRange": 1000,
-          "LookAtCamera": false,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "PanelSize": "1000,2200",
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderScale": 1,
-          "VerticalAlign": "Center"
-        },
-        {
-          "__type": "Sandbox.InfoKioskPanel",
-          "__guid": "37cdc9a5-ddb5-4f19-a052-6c008501f335",
-          "__enabled": true,
-          "Flags": 0,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null
-        }
-      ],
-      "Children": []
-    },
-    {
       "__guid": "261279df-0a38-48ee-a91d-35baa8742f13",
       "__version": 2,
       "Flags": 0,
@@ -20975,6 +20920,61 @@
               },
               "RenderType": "On",
               "Tint": "1,1,1,1"
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "b3b6cbdc-abec-4d05-a6fc-0ee2066a145f",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "kiosktext",
+          "Position": "3.29071808,0,53.773159",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.5,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.WorldPanel",
+              "__guid": "2a62cddc-c591-4dff-bf27-594274713d7a",
+              "__enabled": true,
+              "Flags": 0,
+              "HorizontalAlign": "Center",
+              "InteractionRange": 1000,
+              "LookAtCamera": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "PanelSize": "1000,2200",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderScale": 1,
+              "VerticalAlign": "Center"
+            },
+            {
+              "__type": "Sandbox.InfoKioskPanel",
+              "__guid": "37cdc9a5-ddb5-4f19-a052-6c008501f335",
+              "__enabled": true,
+              "Flags": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
             }
           ],
           "Children": []
