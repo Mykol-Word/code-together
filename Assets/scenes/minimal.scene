@@ -10793,14 +10793,6 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
-                    },
-                    "Property": "RetryInterval",
-                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -10894,14 +10886,6 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
-                    },
-                    "Property": "RetryInterval",
-                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -11004,14 +10988,6 @@
                       "Type": "Component",
                       "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
                     },
-                    "Property": "FalloffRadius",
-                    "Value": 20
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
-                    },
                     "Property": "TargetYaw",
                     "Value": 0
                   }
@@ -11055,14 +11031,6 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
-                    },
-                    "Property": "FalloffRadius",
-                    "Value": 20
                   },
                   {
                     "Target": {
@@ -11131,14 +11099,6 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
-                    },
-                    "Property": "FalloffRadius",
-                    "Value": 20
                   }
                 ],
                 "MovedObjects": []
@@ -11172,14 +11132,6 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
-                    },
-                    "Property": "FalloffRadius",
-                    "Value": 20
                   }
                 ],
                 "MovedObjects": []
@@ -11310,14 +11262,6 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
-                    },
-                    "Property": "RetryInterval",
-                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -11403,14 +11347,6 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
-                    },
-                    "Property": "RetryInterval",
-                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -11883,14 +11819,6 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
-                    },
-                    "Property": "RetryInterval",
-                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -11984,14 +11912,6 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
-                    },
-                    "Property": "RetryInterval",
-                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -12086,14 +12006,6 @@
                       "Type": "Component",
                       "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
                     },
-                    "Property": "FalloffRadius",
-                    "Value": 20
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
-                    },
                     "Property": "TargetYaw",
                     "Value": 0
                   }
@@ -12137,14 +12049,6 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
-                    },
-                    "Property": "FalloffRadius",
-                    "Value": 20
                   },
                   {
                     "Target": {
@@ -12213,14 +12117,6 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
-                    },
-                    "Property": "FalloffRadius",
-                    "Value": 20
                   }
                 ],
                 "MovedObjects": []
@@ -12254,14 +12150,6 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
-                    },
-                    "Property": "FalloffRadius",
-                    "Value": 20
                   }
                 ],
                 "MovedObjects": []
@@ -12400,14 +12288,6 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
-                    },
-                    "Property": "RetryInterval",
-                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -12493,14 +12373,6 @@
                     },
                     "Property": "Scale",
                     "Value": "200,2000,1150"
-                  },
-                  {
-                    "Target": {
-                      "Type": "Component",
-                      "IdValue": "55a714c2-0807-4d2a-af52-16639c38cbea"
-                    },
-                    "Property": "RetryInterval",
-                    "Value": 3
                   }
                 ],
                 "MovedObjects": []
@@ -20394,7 +20266,7 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "SkyIndirectLighting": false,
-          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "SkyMaterial": "materials/citmap.vmat",
           "Tint": "1,1,1,1"
         }
       ],
@@ -20977,14 +20849,14 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "4c410c36-c591-4d96-a233-70b59e223d96"
-        }
-      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
+        }
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "4c410c36-c591-4d96-a233-70b59e223d96"
         }
       }
     }
