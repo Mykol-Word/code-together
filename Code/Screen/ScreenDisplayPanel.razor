@@ -17,6 +17,7 @@
 @code
 {
 	[Property] public string ConnectionUri { get; set; } = "ws://localhost:8080";
+	[Property] public float RetryInterval { get; set; } = 3f;
 
 	public WebSocket Socket { get; private set; }
 
@@ -24,22 +25,23 @@
 
 	private Texture _texture;
 	private Bitmap _bitmap;
+	private TimeUntil _next_attempt;
+	private bool _connecting;
+	private bool _warned;
 
 	protected override void OnEnabled()
 	{
 		if ( IsProxy ) return;
 
-		Socket = new WebSocket(500000); // 500 KB limit
-		Socket.OnMessageReceived += OnFrame;
-		_ = Connect();
+		_next_attempt = 0f;
+		_warned = false;
 	}
 
 	protected override void OnDisabled()
 	{
 		if ( IsProxy ) return;
 
-		Socket?.Dispose();
-		Socket = null;
+		DropSocket();
 		_connected = false;
 	}
 
@@ -49,17 +51,59 @@
 		_bitmap?.Dispose();
 	}
 
+	// retries the connection whenever it isnt established
+	protected override void OnUpdate()
+	{
+		if ( IsProxy ) return;
+		if ( _connected || _connecting ) return;
+		if ( !_next_attempt ) return;
+
+		_ = Connect();
+	}
+
 	private async Task Connect()
 	{
+		_connecting = true;
+
+		DropSocket();
+		Socket = new WebSocket(500000); // 500 KB limit
+		Socket.OnMessageReceived += OnFrame;
+		Socket.OnDisconnected += OnSocketDisconnected;
+
 		try
 		{
 			await Socket.Connect( ConnectionUri );
 			_connected = true;
+			_warned = false;
 		}
 		catch ( Exception e )
 		{
-			Log.Error( $"failed to connect: {e.Message}" );
+			if ( !_warned )
+				Log.Warning( $"failed to connect: {e.Message}" );
+
+			_warned = true;
+			_next_attempt = RetryInterval;
 		}
+
+		_connecting = false;
+	}
+
+	// flags the stream as down and schedules a reconnect attempt
+	private void OnSocketDisconnected( int status, string reason )
+	{
+		_connected = false;
+		_next_attempt = RetryInterval;
+	}
+
+	// tears down the current socket and its subscriptions
+	private void DropSocket()
+	{
+		if ( Socket is null ) return;
+
+		Socket.OnMessageReceived -= OnFrame;
+		Socket.OnDisconnected -= OnSocketDisconnected;
+		Socket.Dispose();
+		Socket = null;
 	}
 
 	private void OnFrame( string message )
