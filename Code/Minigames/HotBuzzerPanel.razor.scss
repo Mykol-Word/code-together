@@ -5,10 +5,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 24px;
-	padding: 32px 48px;
+	gap: 16px;
+	padding: 20px 28px;
 	font-family: Perfect DOS VGA 437;
-	font-size: 18px;
+	font-size: 22px;
 	font-smooth: never;
 	background-color: #000000;
 }
@@ -21,6 +21,13 @@ label {
 	font-size: 32px;
 	padding-bottom: 8px;
 	border-bottom: 2px solid white;
+}
+
+.instructions {
+	font-size: 18px;
+	color: #ffe83d;
+	text-align: center;
+	white-space: pre-wrap;
 }
 
 .cols {
@@ -36,8 +43,8 @@ label {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 16px;
-	padding: 0 24px;
+	gap: 12px;
+	padding: 0 16px;
 }
 
 .divider {
@@ -48,7 +55,7 @@ label {
 
 .turn {
 	color: #ffd24a;
-	font-size: 24px;
+	font-size: 28px;
 }
 
 .loser {

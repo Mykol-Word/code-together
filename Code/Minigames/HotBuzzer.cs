@@ -224,10 +224,26 @@ public sealed class HotBuzzer : Component
 			Participants.Add( chair_index );
 	}
 
+	// picks the next buzz, biasing toward the opposite input by 0.1 per consecutive repeat
+	private int PickNextBuzz()
+	{
+		if ( Sequence.Count == 0 )
+			return Game.Random.Int( 0, 1 );
+
+		var last = Sequence[Sequence.Count - 1];
+		var streak = 0;
+		for ( var i = Sequence.Count - 1; i >= 0 && Sequence[i] == last; i-- )
+			streak++;
+
+		var other_chance = 0.5f + 0.1f * streak;
+		Log.Info( $"hot buzzer: streak {streak} of {(last == 0 ? "left" : "right")}, other chance {other_chance:0.0}" );
+		return Game.Random.Float( 0f, 1f ) < other_chance ? 1 - last : last;
+	}
+
 	// appends a random buzz and enters the replay phase before the next turn
 	private void BeginReplay( bool completed_turn )
 	{
-		Sequence.Add( Game.Random.Int( 0, 1 ) );
+		Sequence.Add( PickNextBuzz() );
 		_replay_index = 0;
 		_replay_step = completed_turn ? ReplayStep.CorrectSound : ReplayStep.Buzzes;
 		_next_replay_event = completed_turn ? CorrectSoundDelay : ReplayStartDelay;
