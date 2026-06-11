@@ -17,7 +17,7 @@ public sealed class NetworkManager : Component, Component.INetworkListener
 		} );
 	}
 
-	// spawns a player object for each connecting client
+	// spawns a player object for each connecting client and dresses it from their avatar
 	public void OnActive( Connection connection )
 	{
 		if ( PlayerPrefab == null ) return;
@@ -25,5 +25,12 @@ public sealed class NetworkManager : Component, Component.INetworkListener
 		var spawn = SpawnPoint?.Transform.World ?? WorldTransform;
 		var go = PlayerPrefab.Clone( spawn );
 		go.NetworkSpawn( connection );
+
+		var dresser = go.GetComponentInChildren<Dresser>( true );
+		if ( dresser.IsValid() )
+		{
+			dresser.Source = Dresser.ClothingSource.OwnerConnection;
+			_ = dresser.Apply();
+		}
 	}
 }
