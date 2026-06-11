@@ -1,0 +1,22 @@
+@namespace Sandbox
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="screen">
+		<label class="title">INFO KIOSK</label>
+
+		<label class="line">- Welcome to Code Together!</label>
+		<label class="line">- Here you can cowork with others, stream your screen to show progress, play minigames, and whatever else you want.</label>
+		<label class="line">- To stream your screen you will need a small external tool.</label>
+		<label class="line kw">- You can find the GitHub repo link for the tool in the Code Together game description.</label>
+		<label class="line">- In game, you can roll up to a desk and face it to unlock your mouse and start streaming.</label>
+		<label class="line kw">- You can also press TAB at any time to unlock your mouse anywhere.</label>
+	</div>
+</root>
+
+@code
+{
+	protected override int BuildHash() => 0;
+}

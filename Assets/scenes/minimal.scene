@@ -155,8 +155,8 @@
       "__version": 2,
       "Flags": 0,
       "Name": "spawn",
-      "Position": "0,294.773468,76.9445114",
-      "Rotation": "0,0,0,1",
+      "Position": "0,376.186768,76.9445114",
+      "Rotation": "-0,0,1,-4.37113883E-08",
       "Scale": "1,1,1",
       "Tags": "",
       "Enabled": true,
@@ -20806,6 +20806,180 @@
           "Children": []
         }
       ]
+    },
+    {
+      "__guid": "b3b6cbdc-abec-4d05-a6fc-0ee2066a145f",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "kiosktext",
+      "Position": "-209.853104,380.476562,53.773159",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.WorldPanel",
+          "__guid": "2a62cddc-c591-4dff-bf27-594274713d7a",
+          "__enabled": true,
+          "Flags": 0,
+          "HorizontalAlign": "Center",
+          "InteractionRange": 1000,
+          "LookAtCamera": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "PanelSize": "1000,2200",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderScale": 1,
+          "VerticalAlign": "Center"
+        },
+        {
+          "__type": "Sandbox.InfoKioskPanel",
+          "__guid": "37cdc9a5-ddb5-4f19-a052-6c008501f335",
+          "__enabled": true,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "261279df-0a38-48ee-a91d-35baa8742f13",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "infokiosk",
+      "Position": "-216.43454,380.476562,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "2,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "71744266-e563-4033-bfba-74ad86980dce",
+          "__enabled": true,
+          "Flags": 0,
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "LodOverride": null,
+          "MaterialGroup": null,
+          "MaterialOverride": "materials/generic/metal_brushed.vmat",
+          "Materials": null,
+          "Model": "models/props/trim_sheets/doors/wooden_door_frame/wooden_door_frame_single_02b.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "f1ac3060-b820-4779-ac11-6626ca6e5261",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "0,0,55",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "8,56,115",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "5084ff90-a35b-46a2-8a93-7f4a7bd995ca",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "Cube",
+          "Position": "-1.67127991,0,45.5480728",
+          "Rotation": "0,0,0,1",
+          "Scale": "0.100000001,1,2.5",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "a0863ad5-6451-49ca-9e56-777bcf0cc452",
+              "__enabled": true,
+              "Flags": 0,
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "LodOverride": null,
+              "MaterialGroup": null,
+              "MaterialOverride": "materials/generic/metal_brushed.vmat",
+              "Materials": null,
+              "Model": "models/dev/box.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ],
+          "Children": []
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -20828,11 +21002,6 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "4c410c36-c591-4d96-a233-70b59e223d96"
-        }
-      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
@@ -20878,6 +21047,7 @@
     "facepunch.wire_cage_a#111324",
     "facepunch.wired_glass_b#101340",
     "facepunch.wood_trim_03#274180",
+    "facepunch.wooden_door_frame_single_02b#275047",
     "facepunch.wtoolgun#144911",
     "polyhaven.garden_gnome#19656"
   ],
