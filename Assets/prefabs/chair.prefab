@@ -3,7 +3,7 @@
     "__guid": "a9f41836-905b-481b-9e5f-504855585978",
     "__version": 2,
     "Flags": 0,
-    "Name": "Chair",
+    "Name": "chair",
     "Position": "0,0,0",
     "Rotation": "0,0,0,1",
     "Scale": "1,1,1",
@@ -158,6 +158,22 @@
         "OnComponentUpdate": null,
         "SpinSmoothing": 6,
         "SpinSpeed": 180
+      },
+      {
+        "__type": "ChairRollSound",
+        "__guid": "2f9812b2-257a-4a91-b3bd-f1bdb9935c13",
+        "__enabled": true,
+        "Flags": 0,
+        "MaxSpeed": 150,
+        "MaxSpinSpeed": 270,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RollSound": "sounds/chairroll.sound",
+        "VolumeSmoothing": 8
       }
     ],
     "Children": [
@@ -270,7 +286,28 @@
         "Components": [],
         "Children": []
       }
-    ]
+    ],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": false,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": "",
+        "DeferGeneration": false,
+        "CustomBounds": false
+      }
+    },
+    "__variables": []
   },
   "ResourceVersion": 2,
   "ShowInMenu": false,
