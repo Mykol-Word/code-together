@@ -13,7 +13,6 @@
 	{
 		<div class="view">
 			<label class="btn" onclick="@OnStreamScreenClick">stream screen</label>
-			<label class="btn" onclick="@SetScreen">set screen</label>
 			<label class="btn danger" onclick="@Unclaim">unclaim</label>
 		</div>
 	}
@@ -58,10 +57,5 @@
 		GetComponent<ScreenDisplayPanel>( true ).Enabled = true;
 		Enabled = false;
 	}
-	void SetScreen()
-	{
-
-	}
-
 	protected override int BuildHash() => System.HashCode.Combine( _claimed );
 }
