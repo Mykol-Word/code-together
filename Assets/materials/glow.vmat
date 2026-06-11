@@ -1,0 +1,6 @@
+
+Layer0
+{
+	shader "shaders/glow.shader_c"
+
+}
