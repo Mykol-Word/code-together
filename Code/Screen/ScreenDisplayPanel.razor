@@ -67,7 +67,7 @@
 
 		DropSocket();
 		Socket = new WebSocket(500000); // 500 KB limit
-		Socket.OnMessageReceived += OnFrame;
+		Socket.OnDataReceived += OnFrame;
 		Socket.OnDisconnected += OnSocketDisconnected;
 
 		try
@@ -100,22 +100,21 @@
 	{
 		if ( Socket is null ) return;
 
-		Socket.OnMessageReceived -= OnFrame;
+		Socket.OnDataReceived -= OnFrame;
 		Socket.OnDisconnected -= OnSocketDisconnected;
 		Socket.Dispose();
 		Socket = null;
 	}
 
-	private void OnFrame( string message )
+	private void OnFrame( Span<byte> data )
 	{
-		ApplyFrame( message );
+		ApplyFrame( data.ToArray() );
 	}
 
 	[Rpc.Broadcast( NetFlags.SendImmediate )]
-	private void ApplyFrame( string base64 )
+	private void ApplyFrame( byte[] jpeg )
 	{
-		var bytes = Convert.FromBase64String( base64 );
-		var bitmap = Bitmap.CreateFromBytes( bytes );
+		var bitmap = Bitmap.CreateFromBytes( jpeg );
 
 		_bitmap?.Dispose();
 		_bitmap = bitmap;
