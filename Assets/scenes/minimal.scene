@@ -18389,7 +18389,7 @@
           "Name": "redgoal",
           "Position": "549.999634,287.999878,96",
           "Rotation": "0,0,0.707106709,0.707106829",
-          "Scale": "1,1,1",
+          "Scale": "1,1.5,1",
           "Tags": "",
           "Enabled": true,
           "NetworkMode": 2,
@@ -18539,7 +18539,7 @@
           "Name": "blackgoal",
           "Position": "549.999817,712.204407,95.9999924",
           "Rotation": "0,-0,-0.707106769,0.707106769",
-          "Scale": "1,1,1",
+          "Scale": "1,1.5,1",
           "Tags": "",
           "Enabled": true,
           "NetworkMode": 2,
@@ -18680,257 +18680,7 @@
               "SurfaceVelocity": "0,0,0"
             }
           ],
-          "Children": [
-            {
-              "__guid": "211badf7-644f-4176-8811-7ee7f1790456",
-              "__version": 2,
-              "Flags": 0,
-              "Name": "blackgoalfog",
-              "Position": "54.981636,108.007347,-95.0899963",
-              "Rotation": "0,0,0.707106829,0.707106829",
-              "Scale": "1,1,1",
-              "Tags": "",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkFlags": 0,
-              "NetworkOrphaned": 0,
-              "NetworkTransmit": true,
-              "OwnerTransfer": 1,
-              "Components": [],
-              "Children": [
-                {
-                  "__guid": "a7d37b93-87c8-4a32-8a78-2b572ff88ba4",
-                  "__version": 2,
-                  "Flags": 0,
-                  "Name": "Cube",
-                  "Position": "-108.007141,54.8734131,43.5911331",
-                  "Rotation": "0,0,0,1",
-                  "Scale": "2.9000001,0.00999999978,2",
-                  "Tags": "",
-                  "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkFlags": 0,
-                  "NetworkOrphaned": 0,
-                  "NetworkTransmit": true,
-                  "OwnerTransfer": 1,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.ModelRenderer",
-                      "__guid": "770f37d6-3a58-4b5e-afbb-f3883442ffca",
-                      "__enabled": true,
-                      "Flags": 0,
-                      "BodyGroups": 18446744073709551615,
-                      "CreateAttachments": false,
-                      "LodOverride": null,
-                      "MaterialGroup": null,
-                      "MaterialOverride": "materials/black.vmat",
-                      "Materials": null,
-                      "Model": "models/dev/box.vmdl",
-                      "OnComponentDestroy": null,
-                      "OnComponentDisabled": null,
-                      "OnComponentEnabled": null,
-                      "OnComponentFixedUpdate": null,
-                      "OnComponentStart": null,
-                      "OnComponentUpdate": null,
-                      "RenderOptions": {
-                        "GameLayer": true,
-                        "OverlayLayer": false,
-                        "BloomLayer": false,
-                        "AfterUILayer": false
-                      },
-                      "RenderType": "On",
-                      "Tint": "1,1,1,0.2"
-                    }
-                  ],
-                  "Children": []
-                },
-                {
-                  "__guid": "29cb1ade-5d24-42fd-b33c-ae7c26414d7f",
-                  "__version": 2,
-                  "Flags": 0,
-                  "Name": "Cube (1)",
-                  "Position": "-108.007141,61.7540283,43.5911331",
-                  "Rotation": "0,0,0,1",
-                  "Scale": "2.9000001,0.00999999978,2",
-                  "Tags": "",
-                  "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkFlags": 0,
-                  "NetworkOrphaned": 0,
-                  "NetworkTransmit": true,
-                  "OwnerTransfer": 1,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.ModelRenderer",
-                      "__guid": "58206055-3bfa-4d28-9a85-90c5bf38a1cc",
-                      "__enabled": true,
-                      "Flags": 0,
-                      "BodyGroups": 18446744073709551615,
-                      "CreateAttachments": false,
-                      "LodOverride": null,
-                      "MaterialGroup": null,
-                      "MaterialOverride": "materials/black.vmat",
-                      "Materials": null,
-                      "Model": "models/dev/box.vmdl",
-                      "OnComponentDestroy": null,
-                      "OnComponentDisabled": null,
-                      "OnComponentEnabled": null,
-                      "OnComponentFixedUpdate": null,
-                      "OnComponentStart": null,
-                      "OnComponentUpdate": null,
-                      "RenderOptions": {
-                        "GameLayer": true,
-                        "OverlayLayer": false,
-                        "BloomLayer": false,
-                        "AfterUILayer": false
-                      },
-                      "RenderType": "On",
-                      "Tint": "1,1,1,0.4"
-                    }
-                  ],
-                  "Children": []
-                },
-                {
-                  "__guid": "165c10f3-2aeb-4724-811b-8c99945a5fab",
-                  "__version": 2,
-                  "Flags": 0,
-                  "Name": "Cube (2)",
-                  "Position": "-108.007141,70.8475342,43.5911331",
-                  "Rotation": "0,0,0,1",
-                  "Scale": "2.9000001,0.00999999978,2",
-                  "Tags": "",
-                  "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkFlags": 0,
-                  "NetworkOrphaned": 0,
-                  "NetworkTransmit": true,
-                  "OwnerTransfer": 1,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.ModelRenderer",
-                      "__guid": "4d5ed527-b125-4635-9757-880f8ee7fa21",
-                      "__enabled": true,
-                      "Flags": 0,
-                      "BodyGroups": 18446744073709551615,
-                      "CreateAttachments": false,
-                      "LodOverride": null,
-                      "MaterialGroup": null,
-                      "MaterialOverride": "materials/black.vmat",
-                      "Materials": null,
-                      "Model": "models/dev/box.vmdl",
-                      "OnComponentDestroy": null,
-                      "OnComponentDisabled": null,
-                      "OnComponentEnabled": null,
-                      "OnComponentFixedUpdate": null,
-                      "OnComponentStart": null,
-                      "OnComponentUpdate": null,
-                      "RenderOptions": {
-                        "GameLayer": true,
-                        "OverlayLayer": false,
-                        "BloomLayer": false,
-                        "AfterUILayer": false
-                      },
-                      "RenderType": "On",
-                      "Tint": "1,1,1,0.6"
-                    }
-                  ],
-                  "Children": []
-                },
-                {
-                  "__guid": "80e376cc-34cd-4667-9052-1aa69c664cc6",
-                  "__version": 2,
-                  "Flags": 0,
-                  "Name": "Cube (3)",
-                  "Position": "-108.007141,77.0281982,43.5911331",
-                  "Rotation": "0,0,0,1",
-                  "Scale": "2.9000001,0.00999999978,2",
-                  "Tags": "",
-                  "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkFlags": 0,
-                  "NetworkOrphaned": 0,
-                  "NetworkTransmit": true,
-                  "OwnerTransfer": 1,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.ModelRenderer",
-                      "__guid": "0bcb790d-8548-417f-a5ad-16fa92a8a8e8",
-                      "__enabled": true,
-                      "Flags": 0,
-                      "BodyGroups": 18446744073709551615,
-                      "CreateAttachments": false,
-                      "LodOverride": null,
-                      "MaterialGroup": null,
-                      "MaterialOverride": "materials/black.vmat",
-                      "Materials": null,
-                      "Model": "models/dev/box.vmdl",
-                      "OnComponentDestroy": null,
-                      "OnComponentDisabled": null,
-                      "OnComponentEnabled": null,
-                      "OnComponentFixedUpdate": null,
-                      "OnComponentStart": null,
-                      "OnComponentUpdate": null,
-                      "RenderOptions": {
-                        "GameLayer": true,
-                        "OverlayLayer": false,
-                        "BloomLayer": false,
-                        "AfterUILayer": false
-                      },
-                      "RenderType": "On",
-                      "Tint": "1,1,1,0.8"
-                    }
-                  ],
-                  "Children": []
-                },
-                {
-                  "__guid": "d3d6cf38-db83-418d-8ad1-8ef6f2f61474",
-                  "__version": 2,
-                  "Flags": 0,
-                  "Name": "Cube (4)",
-                  "Position": "-108.007141,83.9295654,38.9777184",
-                  "Rotation": "0,0,0,1",
-                  "Scale": "2.9000001,0.00999999978,2",
-                  "Tags": "",
-                  "Enabled": true,
-                  "NetworkMode": 2,
-                  "NetworkFlags": 0,
-                  "NetworkOrphaned": 0,
-                  "NetworkTransmit": true,
-                  "OwnerTransfer": 1,
-                  "Components": [
-                    {
-                      "__type": "Sandbox.ModelRenderer",
-                      "__guid": "7c8d6020-95fe-4670-a5c3-2078dc0b6cc7",
-                      "__enabled": true,
-                      "Flags": 0,
-                      "BodyGroups": 18446744073709551615,
-                      "CreateAttachments": false,
-                      "LodOverride": null,
-                      "MaterialGroup": null,
-                      "MaterialOverride": "materials/black.vmat",
-                      "Materials": null,
-                      "Model": "models/dev/box.vmdl",
-                      "OnComponentDestroy": null,
-                      "OnComponentDisabled": null,
-                      "OnComponentEnabled": null,
-                      "OnComponentFixedUpdate": null,
-                      "OnComponentStart": null,
-                      "OnComponentUpdate": null,
-                      "RenderOptions": {
-                        "GameLayer": true,
-                        "OverlayLayer": false,
-                        "BloomLayer": false,
-                        "AfterUILayer": false
-                      },
-                      "RenderType": "On",
-                      "Tint": "1,1,1,1"
-                    }
-                  ],
-                  "Children": []
-                }
-              ]
-            }
-          ]
+          "Children": []
         },
         {
           "__guid": "c6915105-c400-4859-b1cf-07edb85a9c92",
@@ -18956,7 +18706,7 @@
               "Name": "Cube",
               "Position": "-108.007141,54.8734131,43.5911331",
               "Rotation": "0,0,0,1",
-              "Scale": "2.9000001,0.00999999978,2",
+              "Scale": "4.3499999,0.00999999978,2",
               "Tags": "",
               "Enabled": true,
               "NetworkMode": 2,
@@ -19002,7 +18752,7 @@
               "Name": "Cube (1)",
               "Position": "-108.007141,61.7540283,43.5911331",
               "Rotation": "0,0,0,1",
-              "Scale": "2.9000001,0.00999999978,2",
+              "Scale": "4.3499999,0.00999999978,2",
               "Tags": "",
               "Enabled": true,
               "NetworkMode": 2,
@@ -19048,7 +18798,7 @@
               "Name": "Cube (2)",
               "Position": "-108.007141,70.8475342,43.5911331",
               "Rotation": "0,0,0,1",
-              "Scale": "2.9000001,0.00999999978,2",
+              "Scale": "4.3499999,0.00999999978,2",
               "Tags": "",
               "Enabled": true,
               "NetworkMode": 2,
@@ -19094,7 +18844,7 @@
               "Name": "Cube (3)",
               "Position": "-108.007141,77.0281982,43.5911331",
               "Rotation": "0,0,0,1",
-              "Scale": "2.9000001,0.00999999978,2",
+              "Scale": "4.3499999,0.00999999978,2",
               "Tags": "",
               "Enabled": true,
               "NetworkMode": 2,
@@ -19140,7 +18890,7 @@
               "Name": "Cube (4)",
               "Position": "-108.007141,83.9295654,38.9777184",
               "Rotation": "0,0,0,1",
-              "Scale": "2.9000001,0.00999999978,2",
+              "Scale": "4.3499999,0.00999999978,2",
               "Tags": "",
               "Enabled": true,
               "NetworkMode": 2,
@@ -19152,6 +18902,255 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "66749a2e-b949-4fc3-b23a-0109aaaac7f7",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/black.vmat",
+                  "Materials": null,
+                  "Model": "models/dev/box.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "211badf7-644f-4176-8811-7ee7f1790456",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "blackgoalfog",
+          "Position": "658.007141,657.222778,0.910003662",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "a7d37b93-87c8-4a32-8a78-2b572ff88ba4",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "Cube",
+              "Position": "-108.007141,54.8734131,43.5911331",
+              "Rotation": "0,0,0,1",
+              "Scale": "4.3499999,0.00999999978,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "770f37d6-3a58-4b5e-afbb-f3883442ffca",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/black.vmat",
+                  "Materials": null,
+                  "Model": "models/dev/box.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,0.2"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "29cb1ade-5d24-42fd-b33c-ae7c26414d7f",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "Cube (1)",
+              "Position": "-108.007141,61.7540283,43.5911331",
+              "Rotation": "0,0,0,1",
+              "Scale": "4.3499999,0.00999999978,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "58206055-3bfa-4d28-9a85-90c5bf38a1cc",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/black.vmat",
+                  "Materials": null,
+                  "Model": "models/dev/box.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,0.4"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "165c10f3-2aeb-4724-811b-8c99945a5fab",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "Cube (2)",
+              "Position": "-108.007141,70.8475342,43.5911331",
+              "Rotation": "0,0,0,1",
+              "Scale": "4.3499999,0.00999999978,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "4d5ed527-b125-4635-9757-880f8ee7fa21",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/black.vmat",
+                  "Materials": null,
+                  "Model": "models/dev/box.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,0.6"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "80e376cc-34cd-4667-9052-1aa69c664cc6",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "Cube (3)",
+              "Position": "-108.007141,77.0281982,43.5911331",
+              "Rotation": "0,0,0,1",
+              "Scale": "4.3499999,0.00999999978,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "0bcb790d-8548-417f-a5ad-16fa92a8a8e8",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/black.vmat",
+                  "Materials": null,
+                  "Model": "models/dev/box.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,0.8"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "d3d6cf38-db83-418d-8ad1-8ef6f2f61474",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "Cube (4)",
+              "Position": "-108.007141,83.9295654,38.9777184",
+              "Rotation": "0,0,0,1",
+              "Scale": "4.3499999,0.00999999978,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "7c8d6020-95fe-4670-a5c3-2078dc0b6cc7",
                   "__enabled": true,
                   "Flags": 0,
                   "BodyGroups": 18446744073709551615,
@@ -19345,9 +19344,9 @@
           "__version": 2,
           "Flags": 0,
           "Name": "Ball",
-          "Position": "550,500,11.4645996",
+          "Position": "550,500,38.577652",
           "Rotation": "0,0,0,1",
-          "Scale": "0.300000012,0.300000012,0.300000012",
+          "Scale": "0.699999988,0.699999988,0.699999988",
           "Tags": "ball,particles",
           "Enabled": true,
           "NetworkMode": 1,
@@ -19591,7 +19590,7 @@
                 "component_type": "GoalLightManager"
               },
               "RespawnDelay": 1.5,
-              "RespawnScale": 0.3,
+              "RespawnScale": 0.7,
               "ScaleInTime": 0.5
             }
           ],
@@ -22052,24 +22051,6 @@
           "Children": []
         }
       ]
-    },
-    {
-      "__guid": "a5cda407-8065-44bb-b53b-35c831fd8411",
-      "__version": 2,
-      "Flags": 0,
-      "Name": "Object",
-      "Position": "324.940643,-194.500137,-109.270348",
-      "Rotation": "0,0,0,1",
-      "Scale": "1,1,1",
-      "Tags": "",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkFlags": 0,
-      "NetworkOrphaned": 0,
-      "NetworkTransmit": true,
-      "OwnerTransfer": 1,
-      "Components": [],
-      "Children": []
     }
   ],
   "SceneProperties": {
@@ -22094,7 +22075,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "dc0fbb34-32e1-48d6-9422-bcc0f8535b78"
+          "$blob": "34a071c5-4221-4bcd-816f-d2cb902da858"
         }
       },
       "Sandbox.SelectionSetsSystem": {
