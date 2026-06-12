@@ -3,7 +3,7 @@ using Sandbox;
 // add to the player gameobject alongside PlayerController
 public sealed class ChairCameraLock : Component, PlayerController.IEvents
 {
-	public bool IsLocked { get; set; }
+	[Sync] public bool IsLocked { get; set; }
 	public Rotation TargetRotation { get; set; }
 	[Property] public float PitchOffset { get; set; } = 10f;
 	[Property] public float Smoothing { get; set; } = 5f;

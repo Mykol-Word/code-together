@@ -10,13 +10,14 @@ public sealed class ChairLockZone : Component, Component.ITriggerListener
 	[Property] public float YawSmoothing { get; set; } = 5f;
 
 	[Sync] public bool IsOccupied { get; private set; }
+	public ChairController CurrentChair => _chair;
 	private ChairController _chair;
 	private ChairCameraLock _cam_lock;
 
 	// claim the chair when it enters
 	public void OnTriggerEnter( Collider other )
 	{
-		if ( IsOccupied ) return;
+		if ( IsOccupied && _chair.IsValid() ) return;
 		var chair = other.GameObject.GetComponentInParent<ChairController>();
 		if ( !chair.IsValid() ) return;
 		_chair = chair;

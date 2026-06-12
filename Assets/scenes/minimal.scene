@@ -10991,6 +10991,28 @@
                     },
                     "Property": "TargetYaw",
                     "Value": 0
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Keyboard",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "434edf31-a97e-4366-84d0-9b3c85605cc2"
+                    }
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Mouse",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "88f26dd1-2033-4009-bac5-c0e7c862f3f9"
+                    }
                   }
                 ],
                 "MovedObjects": []
@@ -10998,7 +11020,8 @@
               "__PrefabIdToInstanceId": {
                 "0f5f984a-0528-4935-b4a6-e4666e68908c": "298d00d2-3b73-4b8f-ab73-c6e7fa104465",
                 "bac4cc39-df97-4355-9e1f-aceecbc73dfc": "575e7f96-56eb-4218-b47c-5421646c6512",
-                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "21b049ca-840c-42b6-819f-dee11fb1944a"
+                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "21b049ca-840c-42b6-819f-dee11fb1944a",
+                "2877ac54-46fd-4c4b-92a0-5d9a1e520370": "c14ff13f-9f37-49ae-8f37-b115637707d9"
               }
             },
             {
@@ -11040,6 +11063,28 @@
                     },
                     "Property": "TargetYaw",
                     "Value": 0
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Keyboard",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "4f9daa37-5eba-4541-bb54-c5cae3c019bd"
+                    }
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Mouse",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "0c8aacb0-cdd6-4a39-95d0-2f016229c235"
+                    }
                   }
                 ],
                 "MovedObjects": []
@@ -11047,7 +11092,8 @@
               "__PrefabIdToInstanceId": {
                 "0f5f984a-0528-4935-b4a6-e4666e68908c": "3c30d2e5-d7ba-4b12-9d1e-3f2b3d9c6e7a",
                 "bac4cc39-df97-4355-9e1f-aceecbc73dfc": "b0cb55ba-48ec-4142-809f-f367f095e271",
-                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "5887478d-490e-4dbc-bc85-e8f8cabf9e58"
+                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "5887478d-490e-4dbc-bc85-e8f8cabf9e58",
+                "2877ac54-46fd-4c4b-92a0-5d9a1e520370": "a5d43218-b4d1-47a6-9725-16b93330181f"
               }
             }
           ]
@@ -11100,6 +11146,28 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Keyboard",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "f2751285-6e86-4e4a-88c5-5c46eccb57f1"
+                    }
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Mouse",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "e932d7fb-183d-4915-b039-39205783af64"
+                    }
                   }
                 ],
                 "MovedObjects": []
@@ -11107,7 +11175,8 @@
               "__PrefabIdToInstanceId": {
                 "0f5f984a-0528-4935-b4a6-e4666e68908c": "d73005b6-7fd4-4b12-b94f-482747ded602",
                 "bac4cc39-df97-4355-9e1f-aceecbc73dfc": "4b241e25-d99d-4c97-805c-aaa0bb22ff22",
-                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "ceac57b6-9a19-4edd-8b1a-13ac1f481e89"
+                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "ceac57b6-9a19-4edd-8b1a-13ac1f481e89",
+                "2877ac54-46fd-4c4b-92a0-5d9a1e520370": "8fe8f401-d2c0-461b-8951-0deacb199734"
               }
             },
             {
@@ -11133,6 +11202,28 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Keyboard",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "9369c2a5-5bfe-4a15-a137-078cea073774"
+                    }
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Mouse",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "2ea98cdc-7314-460c-b5e3-e128df514007"
+                    }
                   }
                 ],
                 "MovedObjects": []
@@ -11140,7 +11231,8 @@
               "__PrefabIdToInstanceId": {
                 "0f5f984a-0528-4935-b4a6-e4666e68908c": "4ffd411a-8015-467f-836a-e85445cd7d76",
                 "bac4cc39-df97-4355-9e1f-aceecbc73dfc": "3204129b-0da3-4cc8-9414-3ee30c4cf7a0",
-                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "fe60c32c-7323-4273-8fc0-801580290846"
+                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "fe60c32c-7323-4273-8fc0-801580290846",
+                "2877ac54-46fd-4c4b-92a0-5d9a1e520370": "3b8acf84-4d86-4a34-a940-b670d49d1b90"
               }
             },
             {
@@ -12011,6 +12103,28 @@
                     },
                     "Property": "TargetYaw",
                     "Value": 0
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Keyboard",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "2f0f8a59-64d8-44c8-9356-dd95072468b9"
+                    }
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Mouse",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "388c7ce6-034a-473f-8ef8-a2416bc3cac9"
+                    }
                   }
                 ],
                 "MovedObjects": []
@@ -12018,7 +12132,8 @@
               "__PrefabIdToInstanceId": {
                 "0f5f984a-0528-4935-b4a6-e4666e68908c": "47cb4d79-8b41-42e5-8a1b-b3347a891fa2",
                 "bac4cc39-df97-4355-9e1f-aceecbc73dfc": "56b6b123-3cc8-4032-9068-a25d40e83ba6",
-                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "134f89eb-85db-409b-9de9-ebe711b348b6"
+                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "134f89eb-85db-409b-9de9-ebe711b348b6",
+                "2877ac54-46fd-4c4b-92a0-5d9a1e520370": "28df2925-0863-4d17-89cc-94374de2294e"
               }
             },
             {
@@ -12060,6 +12175,28 @@
                     },
                     "Property": "TargetYaw",
                     "Value": 0
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Keyboard",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "5328d4ba-0792-4a42-8c9d-c57140afb0ea"
+                    }
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Mouse",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "05c9d0c9-b535-481d-b01e-83dfe89dcc2a"
+                    }
                   }
                 ],
                 "MovedObjects": []
@@ -12067,7 +12204,8 @@
               "__PrefabIdToInstanceId": {
                 "0f5f984a-0528-4935-b4a6-e4666e68908c": "b82d97fa-a56f-41de-9685-6ecb43d165ee",
                 "bac4cc39-df97-4355-9e1f-aceecbc73dfc": "f87a44db-b07d-4395-a3ff-b93123ecd491",
-                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "562a2376-213a-4291-be1f-26cca19556c8"
+                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "562a2376-213a-4291-be1f-26cca19556c8",
+                "2877ac54-46fd-4c4b-92a0-5d9a1e520370": "504682d4-2d0d-45df-b156-d03f6f0408f8"
               }
             }
           ]
@@ -12120,6 +12258,28 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Keyboard",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "b30050f8-ad3c-4ed6-94a9-4ddceb731693"
+                    }
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Mouse",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "094e6f81-91a6-47f2-b962-1f00b817e845"
+                    }
                   }
                 ],
                 "MovedObjects": []
@@ -12127,7 +12287,8 @@
               "__PrefabIdToInstanceId": {
                 "0f5f984a-0528-4935-b4a6-e4666e68908c": "0f33718e-ae60-4fa2-a61d-7a176dbd54e6",
                 "bac4cc39-df97-4355-9e1f-aceecbc73dfc": "c28c6adc-d530-4d5c-8e2e-44992d05018e",
-                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "a9eb902f-4b70-4db7-8a7b-79671dd3bff3"
+                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "a9eb902f-4b70-4db7-8a7b-79671dd3bff3",
+                "2877ac54-46fd-4c4b-92a0-5d9a1e520370": "10853953-a6ac-459d-bd4d-7216639a3efd"
               }
             },
             {
@@ -12153,6 +12314,28 @@
                     },
                     "Property": "CenterStrength",
                     "Value": 100
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Keyboard",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "11a04c94-90b2-4890-ad5b-6b25d4e743bc"
+                    }
+                  },
+                  {
+                    "Target": {
+                      "Type": "Component",
+                      "IdValue": "2877ac54-46fd-4c4b-92a0-5d9a1e520370"
+                    },
+                    "Property": "Mouse",
+                    "Value": {
+                      "_type": "gameobject",
+                      "go": "61a0a296-fdd8-48d4-9556-aebc988a9c17"
+                    }
                   }
                 ],
                 "MovedObjects": []
@@ -12160,7 +12343,8 @@
               "__PrefabIdToInstanceId": {
                 "0f5f984a-0528-4935-b4a6-e4666e68908c": "32e871b2-d788-4e96-9a6f-243f085a3c2d",
                 "bac4cc39-df97-4355-9e1f-aceecbc73dfc": "d8d53739-c61c-4254-86bd-b704af91748c",
-                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "fe46004f-b96f-4105-b770-79f4ed3daa72"
+                "38dc9d9a-a83a-41d3-983b-7570ecaf772f": "fe46004f-b96f-4105-b770-79f4ed3daa72",
+                "2877ac54-46fd-4c4b-92a0-5d9a1e520370": "18de4456-9a3b-47e9-b98b-5be03ea799b7"
               }
             },
             {
@@ -13520,6 +13704,894 @@
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "ed75b29f-dcd5-4688-825c-880c068059f4",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "keymouse",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "4f9daa37-5eba-4541-bb54-c5cae3c019bd",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "team2_herry_keyboard (7)",
+              "Position": "202.42128,-48.3619576,32.5512009",
+              "Rotation": "0,0,0.998187184,-0.0601859279",
+              "Scale": "1.5,1.5,1.5",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "0711e17b-2e98-49c0-b0fd-e9a659e67c3e",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/keyboard/team2_herry_keyboard.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "0c8aacb0-cdd6-4a39-95d0-2f016229c235",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "2000_mouse",
+              "Position": "199.455414,-72.5769958,32.1805496",
+              "Rotation": "0,0,1,-4.37113883E-08",
+              "Scale": "2,2,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "bad36e10-3280-4720-a9ed-3dc895a56da1",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/props/2000_mouse/2000_mouse.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "983ac86a-185f-47ae-a8e8-04222cd8c05b",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "keymouse (3)",
+          "Position": "-245.25499,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "2f0f8a59-64d8-44c8-9356-dd95072468b9",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "team2_herry_keyboard (7)",
+              "Position": "202.42128,-128.362,32.5512009",
+              "Rotation": "0,0,0.999577105,0.0290789381",
+              "Scale": "1.5,1.5,1.5",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "0771ad24-69e1-4283-b152-94a1857e9f67",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/keyboard/team2_herry_keyboard.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "388c7ce6-034a-473f-8ef8-a2416bc3cac9",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "2000_mouse",
+              "Position": "199.837372,-151.46788,32.1805496",
+              "Rotation": "0,0,0.999865234,-0.0164158102",
+              "Scale": "2,2,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "86464bcc-59f2-4835-aeae-fba9a4241da3",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/props/2000_mouse/2000_mouse.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "70f2f7b6-6559-4e19-a06e-21b8ddb10cde",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "keymouse (5)",
+          "Position": "-1.93742251,-194.360977,0",
+          "Rotation": "0,0,1,-4.37113883E-08",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "b30050f8-ad3c-4ed6-94a9-4ddceb731693",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "team2_herry_keyboard (7)",
+              "Position": "202.42128,-48.3619576,32.5512009",
+              "Rotation": "0,0,0.998187184,-0.0601859279",
+              "Scale": "1.5,1.5,1.5",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "1c5c86f9-542c-488f-a734-981d59a824a1",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/keyboard/team2_herry_keyboard.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "094e6f81-91a6-47f2-b962-1f00b817e845",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "2000_mouse",
+              "Position": "198.471207,-72.2853088,32.1805496",
+              "Rotation": "0,0,1,-4.37113883E-08",
+              "Scale": "2,2,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a534e805-0367-4f32-831d-622199ce2931",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/props/2000_mouse/2000_mouse.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "3aec8a89-25e1-4a87-be6b-35d7b01047c7",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "keymouse (4)",
+          "Position": "-1.93742251,-194.360977,0",
+          "Rotation": "0,0,1,-4.37113883E-08",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "11a04c94-90b2-4890-ad5b-6b25d4e743bc",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "team2_herry_keyboard (7)",
+              "Position": "202.42128,-128.362,32.5512009",
+              "Rotation": "0,0,0.999052763,-0.0435152054",
+              "Scale": "1.5,1.5,1.5",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "6f784d1b-4238-4822-926f-cbb7e743f81f",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/keyboard/team2_herry_keyboard.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "61a0a296-fdd8-48d4-9556-aebc988a9c17",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "2000_mouse",
+              "Position": "198.471207,-152.285461,32.1805496",
+              "Rotation": "0,0,0.999865234,-0.0164158102",
+              "Scale": "2,2,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "c52df310-828e-4077-8112-a5afba500424",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/props/2000_mouse/2000_mouse.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "59ae6d4a-7e54-494a-a74a-b600decdd171",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "keymouse (7)",
+          "Position": "244.11467,-194.360977,0",
+          "Rotation": "0,0,1,-4.37113883E-08",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "f2751285-6e86-4e4a-88c5-5c46eccb57f1",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "team2_herry_keyboard (7)",
+              "Position": "202.42128,-48.3619576,32.5512009",
+              "Rotation": "0,0,0.998187184,-0.0601859279",
+              "Scale": "1.5,1.5,1.5",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "52240299-deb3-4eea-b5a9-8dc20588fc39",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/keyboard/team2_herry_keyboard.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "e932d7fb-183d-4915-b039-39205783af64",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "2000_mouse",
+              "Position": "199.374954,-71.8425598,32.1805496",
+              "Rotation": "0,0,1,-4.37113883E-08",
+              "Scale": "2,2,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "9a0e95e2-0c5f-46b4-a5cc-7862210703b8",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/props/2000_mouse/2000_mouse.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "d91f07a5-c999-4022-a558-677b48310ebd",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "keymouse (6)",
+          "Position": "244.11467,-194.360977,0",
+          "Rotation": "0,0,1,-4.37113883E-08",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "9369c2a5-5bfe-4a15-a137-078cea073774",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "team2_herry_keyboard (7)",
+              "Position": "202.42128,-128.362,32.5512009",
+              "Rotation": "0,0,0.999052763,-0.0435152054",
+              "Scale": "1.5,1.5,1.5",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "ff6f693f-2077-4612-94fe-275ddff6403e",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/keyboard/team2_herry_keyboard.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "2ea98cdc-7314-460c-b5e3-e128df514007",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "2000_mouse",
+              "Position": "199.374954,-151.842712,32.1805496",
+              "Rotation": "0,0,0.999865234,-0.0164158102",
+              "Scale": "2,2,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "05bb2a86-888b-4dea-9d3f-d53c72caf25b",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/props/2000_mouse/2000_mouse.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "907fad45-f69d-4c81-bfae-c482857368bb",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "keymouse (2)",
+          "Position": "-245.25499,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "5328d4ba-0792-4a42-8c9d-c57140afb0ea",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "team2_herry_keyboard (7)",
+              "Position": "202.42128,-48.3619576,32.5512009",
+              "Rotation": "0,0,0.998187184,-0.0601859279",
+              "Scale": "1.5,1.5,1.5",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5b3d929b-6d24-4475-b4d4-124fff415570",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/keyboard/team2_herry_keyboard.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "05c9d0c9-b535-481d-b01e-83dfe89dcc2a",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "2000_mouse",
+              "Position": "199.837372,-71.46772,32.1805496",
+              "Rotation": "0,0,1,-4.37113883E-08",
+              "Scale": "2,2,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "de3b5711-3028-4de3-981b-09ec9369c5e2",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/props/2000_mouse/2000_mouse.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "942d5203-4f92-44a9-b2df-79adb5e99aef",
+          "__version": 2,
+          "Flags": 0,
+          "Name": "keymouse (1)",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkFlags": 0,
+          "NetworkOrphaned": 0,
+          "NetworkTransmit": true,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "434edf31-a97e-4366-84d0-9b3c85605cc2",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "team2_herry_keyboard (7)",
+              "Position": "202.42128,-128.362,32.5512009",
+              "Rotation": "0,0,0.999577105,0.0290789381",
+              "Scale": "1.5,1.5,1.5",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "5069fb5a-984c-45c9-8096-b0b80f4664db",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/keyboard/team2_herry_keyboard.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "88f26dd1-2033-4009-bac5-c0e7c862f3f9",
+              "__version": 2,
+              "Flags": 0,
+              "Name": "2000_mouse",
+              "Position": "199.455414,-152.577148,32.1805496",
+              "Rotation": "0,0,0.999865234,-0.0164158102",
+              "Scale": "2,2,2",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkFlags": 0,
+              "NetworkOrphaned": 0,
+              "NetworkTransmit": true,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "489d9940-1de1-4faa-a6ef-968798e81581",
+                  "__enabled": true,
+                  "Flags": 0,
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "LodOverride": null,
+                  "MaterialGroup": null,
+                  "MaterialOverride": "materials/pacefunch-black.vmat",
+                  "Materials": null,
+                  "Model": "models/props/2000_mouse/2000_mouse.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
                 }
               ],
               "Children": []
@@ -20980,6 +22052,24 @@
           "Children": []
         }
       ]
+    },
+    {
+      "__guid": "a5cda407-8065-44bb-b53b-35c831fd8411",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "Object",
+      "Position": "324.940643,-194.500137,-109.270348",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -21004,7 +22094,7 @@
     "GameObjectSystems": {
       "Sandbox.Clutter.ClutterGridSystem": {
         "Storage": {
-          "$blob": "c8c10add-5962-4d9d-b220-b285e115a5e8"
+          "$blob": "dc0fbb34-32e1-48d6-9422-bcc0f8535b78"
         }
       },
       "Sandbox.SelectionSetsSystem": {
@@ -21054,6 +22144,7 @@
     "facepunch.wood_trim_03#274180",
     "facepunch.wooden_door_frame_single_02b#275047",
     "facepunch.wtoolgun#144911",
+    "fish.2000_mouse#105270",
     "polyhaven.garden_gnome#19656"
   ],
   "__version": 3
