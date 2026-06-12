@@ -17380,6 +17380,7 @@
                   "__guid": "8499ff5f-abc0-4b42-80b9-57ae2599a48d",
                   "__enabled": true,
                   "Flags": 0,
+                  "AchievementScore": 14,
                   "Chairs": [
                     {
                       "_type": "gameobject",
@@ -17423,7 +17424,7 @@
                     "go": "e0144a98-c1c0-4373-8495-41cfda691c45",
                     "component_type": "HotBuzzerPanel"
                   },
-                  "ReplayInterval": 0.5,
+                  "ReplayInterval": 0.4,
                   "ReplayStartDelay": 0.8,
                   "RightSound": "sounds/rightbuzz.sound"
                 }
@@ -21697,7 +21698,7 @@
           "__version": 2,
           "Flags": 0,
           "Name": "outsidebeam (7)",
-          "Position": "-273.298615,301,272",
+          "Position": "-273.298615,301,275.245605",
           "Rotation": "0,0,0.707106769,0.707106769",
           "Scale": "20,1,1",
           "Tags": "",
@@ -22051,6 +22052,64 @@
           "Children": []
         }
       ]
+    },
+    {
+      "__guid": "2180f342-2207-42eb-9d1a-713835d9ae53",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "secretachievement",
+      "Position": "-170.001419,-154.536316,236.222794",
+      "Rotation": "0,0,0,1",
+      "Scale": "3,4,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "AchievementTrigger",
+          "__guid": "927ccf90-4506-4f90-907b-7de0b1e7e958",
+          "__enabled": true,
+          "Flags": 0,
+          "AchievementIdent": "gnome",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "66b627d6-e6ba-4f5a-a7a3-3b4734991f5b",
+          "__enabled": true,
+          "Flags": 0,
+          "Center": "0,0,0",
+          "ColliderFlags": 0,
+          "Elasticity": null,
+          "Friction": null,
+          "IsTrigger": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "RollingResistance": null,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {

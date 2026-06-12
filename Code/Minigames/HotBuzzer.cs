@@ -36,6 +36,9 @@ public sealed class HotBuzzer : Component
 	[Property, Group( "Settings" )]
 	public float ReplayInterval { get; set; } = 0.5f;
 
+	[Property, Group( "Settings" )]
+	public int AchievementScore { get; set; } = 15;
+
 	[Sync] public HotBuzzerPhase Phase { get; private set; } = HotBuzzerPhase.Lobby;
 	[Sync] public NetList<int> ReadyChairs { get; set; } = new();
 	[Sync] public NetList<int> Participants { get; set; } = new();
@@ -44,6 +47,8 @@ public sealed class HotBuzzer : Component
 	[Sync] public int PlaybackIndex { get; private set; }
 	[Sync] public string LastLoser { get; private set; } = "";
 	[Sync] public int BestSequence { get; private set; }
+
+	private const string HIGH_SCORE_ACHIEVEMENT = "high_score";
 
 	private enum ReplayStep { CorrectSound, Buzzes }
 
@@ -186,6 +191,9 @@ public sealed class HotBuzzer : Component
 
 		if ( Sequence.Count > BestSequence )
 			BestSequence = Sequence.Count;
+
+		if ( Sequence.Count >= AchievementScore )
+			Sandbox.Services.Achievements.Unlock( HIGH_SCORE_ACHIEVEMENT );
 
 		AdvanceTurn();
 		BeginReplay( true );

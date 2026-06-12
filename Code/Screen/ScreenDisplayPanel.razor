@@ -21,6 +21,8 @@
 
 	public WebSocket Socket { get; private set; }
 
+	private const string STREAMER_ACHIEVEMENT = "streamer";
+
 	[Sync] private bool _connected { get; set; }
 
 	private Texture _texture;
@@ -75,6 +77,7 @@
 			await Socket.Connect( ConnectionUri );
 			_connected = true;
 			_warned = false;
+			Sandbox.Services.Achievements.Unlock( STREAMER_ACHIEVEMENT );
 		}
 		catch ( Exception e )
 		{

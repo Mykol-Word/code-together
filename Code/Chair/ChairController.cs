@@ -15,10 +15,13 @@ public sealed class ChairController : Component
 	[Property, Group( "Speed Region" )] public float RegionSpinMultiplier { get; set; } = 1f;
 	[Property, Group( "Speed Region" )] public float RegionJumpForce { get; set; } = 300f;
 
+	private const string REGION_ACHIEVEMENT = "rocket_league";
+
 	private BaseChair _chair;
 	private Rigidbody _rb;
 	private CameraComponent _cam;
 	private float _spin_rate;
+	private bool _region_achievement_unlocked;
 
 	protected override void OnStart()
 	{
@@ -44,6 +47,13 @@ public sealed class ChairController : Component
 		var right = Rotation.LookAt( cam_forward, Vector3.Up ).Right;
 
 		var in_region = IsInRegion();
+
+		if ( in_region && !_region_achievement_unlocked )
+		{
+			Sandbox.Services.Achievements.Unlock( REGION_ACHIEVEMENT );
+			_region_achievement_unlocked = true;
+		}
+
 		var move_mult = in_region ? RegionMoveMultiplier : 1f;
 		var spin_mult = in_region ? RegionSpinMultiplier : 1f;
 
