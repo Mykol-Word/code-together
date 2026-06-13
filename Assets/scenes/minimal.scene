@@ -22110,6 +22110,73 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "1bc84302-4c89-46a0-9f04-1d1c9881c321",
+      "__version": 2,
+      "Flags": 0,
+      "Name": "RenderToggle",
+      "Position": "-74.199379,147.352921,84.3732834",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
+      "Tags": "",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkFlags": 0,
+      "NetworkOrphaned": 0,
+      "NetworkTransmit": true,
+      "OwnerTransfer": 1,
+      "Components": [
+        {
+          "__type": "RendererDisable",
+          "__guid": "f9d0f058-f62f-419c-b3e0-3aa6e8cc0294",
+          "__enabled": true,
+          "Flags": 0,
+          "hide_when_unfocused": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "abf5517c-b006-483c-878b-96f7b00db5ac",
+          "__enabled": true,
+          "Flags": 0,
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "TargetCamera": {
+            "_type": "component",
+            "component_id": "9b32bb7b-7cfc-4b86-8d54-caa6fb78c401",
+            "go": "d5abb616-5361-4188-92a5-341898a63eb8",
+            "component_type": "CameraComponent"
+          },
+          "ZIndex": 100
+        },
+        {
+          "__type": "Sandbox.UnfocusedOverlayPanel",
+          "__guid": "d2272bbf-6499-4400-9271-92fb4aa13ce7",
+          "__enabled": false,
+          "Flags": 0,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {

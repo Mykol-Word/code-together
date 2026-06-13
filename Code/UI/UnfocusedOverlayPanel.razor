@@ -1,0 +1,18 @@
+@namespace Sandbox
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="overlay">
+		<label class="title">PAUSED</label>
+		<label class="line">window is unfocused</label>
+		<label class="line dim">rendering stopped to save performance</label>
+		<label class="line dim">click back in to resume</label>
+	</div>
+</root>
+
+@code
+{
+	protected override int BuildHash() => 0;
+}
