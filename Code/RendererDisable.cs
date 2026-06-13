@@ -77,10 +77,13 @@ public sealed class RendererDisable : Component
 			Disable( component );
 	}
 
-	// disables a component and tracks it for later restore, skipping self and the overlay
+	// disables a component and tracks it for later restore, skipping self, the overlay, and persistent components
 	private void Disable( Component component )
 	{
 		if ( component == this || component == overlay )
+			return;
+
+		if ( component is IPersistWhileHidden )
 			return;
 
 		component.Enabled = false;

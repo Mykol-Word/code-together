@@ -3,6 +3,7 @@
 @using System;
 @using System.Threading.Tasks;
 @inherits PanelComponent
+@implements IPersistWhileHidden
 
 <root>
 	<div class="screen">
@@ -117,13 +118,16 @@
 	[Rpc.Broadcast( NetFlags.SendImmediate )]
 	private void ApplyFrame( byte[] jpeg )
 	{
+		var screen = Panel?.GetChild( 0 );
+		if ( screen is null ) return;
+
 		var bitmap = Bitmap.CreateFromBytes( jpeg );
 
 		_bitmap?.Dispose();
 		_bitmap = bitmap;
 
 		_texture = Texture.Create( _bitmap.Width, _bitmap.Height ).Finish();
-		Panel.GetChild( 0 ).Style.SetBackgroundImage( _texture );
+		screen.Style.SetBackgroundImage( _texture );
 
 		_texture.Update( _bitmap );
 	}
