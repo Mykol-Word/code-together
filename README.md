@@ -15,4 +15,4 @@ Get it here: [ct-screen-server](../ct-screen-server/README.md)
 ## Requirements
 
 - s&box (to play the game)
-- Windows with the CT Screen Server tool (to stream your screen)
+- (Optional) Windows with the CT Screen Server tool (to stream your screen)
