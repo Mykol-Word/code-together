@@ -7,7 +7,9 @@ public sealed class RendererDisable : Component
 
 	[Property] private bool hide_when_unfocused = true;
 
-	private readonly List<Component> disabled_components = new();
+	// local-only render tag; cameras render nothing tagged with it, which nothing in the scene is
+	private const string HIDDEN_TAG = "render_paused";
+
 	private UnfocusedOverlayPanel overlay;
 	private bool hidden;
 	private bool was_focused;
@@ -25,83 +27,39 @@ public sealed class RendererDisable : Component
 		was_focused = IsGameFocused();
 	}
 
-	// toggles on ctrl + p, and follows window focus changes when enabled
+	// toggles on ctrl + p, follows focus changes, then reconciles local render state every frame
 	protected override void OnUpdate()
 	{
 		if ( Input.Keyboard.Down( "ctrl" ) && Input.Keyboard.Pressed( "p" ) )
-			SetHidden( !hidden );
+			hidden = !hidden;
 
 		if ( hide_when_unfocused )
 		{
 			var focused = IsGameFocused();
 
 			if ( focused != was_focused )
-				SetHidden( !focused );
+				hidden = !focused;
 
 			was_focused = focused;
 		}
+
+		SyncRenderState();
 	}
 
-	// hides or shows everything if not already in that state
-	private void SetHidden( bool value )
+	// drives this client's cameras and overlay from the local hidden flag, never touching networked
+	// component state, so a paused host cannot bake a hidden world into a joining client's snapshot
+	// and a client that inherits a paused snapshot self-corrects as soon as it runs
+	private void SyncRenderState()
 	{
-		if ( value == hidden )
-			return;
-
-		if ( value )
-			Hide();
-		else
-			Show();
-
-		hidden = value;
-	}
-
-	// shows the unfocused overlay, then disables all renderers, lights, and panels, remembering them
-	private void Hide()
-	{
-		if ( overlay.IsValid() )
-			overlay.Enabled = true;
-
-		disabled_components.Clear();
-
-		foreach ( var component in Scene.GetAllComponents<Renderer>() )
-			Disable( component );
-
-		foreach ( var component in Scene.GetAllComponents<Light>() )
-			Disable( component );
-
-		foreach ( var component in Scene.GetAllComponents<PanelComponent>() )
-			Disable( component );
-
-		foreach ( var component in Scene.GetAllComponents<SkyBox2D>() )
-			Disable( component );
-	}
-
-	// disables a component and tracks it for later restore, skipping self, the overlay, and persistent components
-	private void Disable( Component component )
-	{
-		if ( component == this || component == overlay )
-			return;
-
-		if ( component is IPersistWhileHidden )
-			return;
-
-		component.Enabled = false;
-		disabled_components.Add( component );
-	}
-
-	// reenables only the components this script disabled, then hides the overlay
-	private void Show()
-	{
-		foreach ( var component in disabled_components )
+		foreach ( var camera in Scene.GetAllComponents<CameraComponent>() )
 		{
-			if ( component.IsValid() )
-				component.Enabled = true;
+			if ( hidden && !camera.RenderTags.Has( HIDDEN_TAG ) )
+				camera.RenderTags.Add( HIDDEN_TAG );
+			else if ( !hidden && camera.RenderTags.Has( HIDDEN_TAG ) )
+				camera.RenderTags.Remove( HIDDEN_TAG );
 		}
 
-		disabled_components.Clear();
-
-		if ( overlay.IsValid() )
-			overlay.Enabled = false;
+		if ( overlay.IsValid() && overlay.Enabled != hidden )
+			overlay.Enabled = hidden;
 	}
 }
