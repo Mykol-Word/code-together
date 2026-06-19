@@ -114,7 +114,7 @@
 		ApplyFrame( data.ToArray() );
 	}
 
-	[Rpc.Broadcast( NetFlags.SendImmediate )]
+	[Rpc.Broadcast( NetFlags.Unreliable )]
 	private void ApplyFrame( byte[] jpeg )
 	{
 		var screen = Panel?.GetChild( 0 );
