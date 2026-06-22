@@ -1,9 +1,78 @@
 @using Sandbox;
 @using Sandbox.UI;
+@using System;
+@using System.Linq;
 @inherits PanelComponent
 
 <root>
-	@if ( !_claimed )
+	@if ( _youtube_mode == YoutubeMode.Player )
+	{
+		@if ( IsProxy && !_received_play )
+		{
+			<div class="video-view">
+				<div class="join-message">currently streaming a youtube video<br>ask the owner to resync or play the video again to watch along</div>
+			</div>
+		}
+		else
+		{
+			<div class="video-view">
+				<WebPanel @ref="_web_video" class="web-video" Url="@_youtube_embed_url" />
+				<div class="video-blocker"></div>
+				<div class="video-controls">
+					@if ( !IsProxy )
+					{
+						@if ( !_hint_hidden )
+						{
+							<div class="controls-note">
+								<label class="controls-note-text">to change the time or volume of the video you must press the resync button below for changes to reflect</label>
+								<label class="controls-note-hide" onclick="@OnHideHintClick">HIDE</label>
+							</div>
+						}
+						<div class="seek-row">
+							<div @ref="_seek_track" class="seek-slider" onmousedown="@OnSeekDown" onmousemove="@OnSeekDrag" onmouseup="@OnSeekUp" onmouseout="@OnSeekUp">
+								<div class="seek-fill" style="width: @SeekPercent%;"></div>
+							</div>
+							<label class="time-label">@FormatTime( _seek_seconds ) / @FormatTime( _video_duration )</label>
+						</div>
+					}
+					<div class="control-row">
+						@if ( !IsProxy )
+						{
+							<label class="ctrl-btn back" onclick="@OnStopYoutubeClick">back</label>
+							<label class="ctrl-btn" onclick="@OnTogglePauseClick">@(_youtube_paused ? "unpause" : "pause")</label>
+							<label class="ctrl-btn" onclick="@OnResyncClick">resync</label>
+							<label class="volume-label">vol</label>
+							<div @ref="_volume_track" class="volume-slider" onmousedown="@OnVolumeDown" onmousemove="@OnVolumeDrag" onmouseup="@OnVolumeUp" onmouseout="@OnVolumeUp">
+								<div class="volume-slider-fill" style="width: @_youtube_volume%;"></div>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+		}
+	}
+	else if ( _youtube_mode == YoutubeMode.Setup )
+	{
+		<div class="youtube-view">
+			<label class="title">youtube</label>
+			<TextEntry
+				class="youtube-link"
+				Value="@_youtube_link"
+				Multiline="@true"
+				Disabled="@IsProxy"
+				Placeholder="paste youtube link"
+				OnTextEdited="@OnYoutubeLinkEdited"></TextEntry>
+			@if ( !string.IsNullOrWhiteSpace( _youtube_warning ) )
+			{
+				<label class="warning">@_youtube_warning</label>
+			}
+			<div class="button-row">
+				<label class="btn" onclick="@OnPlayYoutubeClick">play</label>
+				<label class="btn" onclick="@OnBackFromYoutubeClick">back</label>
+			</div>
+		</div>
+	}
+	else if ( !_claimed )
 	{
 		<div class="view" onclick="@Claim">
 			<label class="btn">claim computer</label>
@@ -13,6 +82,7 @@
 	{
 		<div class="view">
 			<label class="btn" onclick="@OnStreamScreenClick">stream screen</label>
+			<label class="btn" onclick="@OnYoutubeClick">youtube video</label>
 			<label class="btn danger" onclick="@Unclaim">unclaim</label>
 		</div>
 	}
@@ -20,7 +90,64 @@
 
 @code
 {
+	private const string YOUTUBE_EMBED_BASE_URL = "https://mykol-word.github.io/code-together-tool/embed/youtube/";
+
+	private enum YoutubeMode
+	{
+		Menu,
+		Setup,
+		Player
+	}
+
 	[Sync] private bool _claimed {get; set;}
+	[Sync] private YoutubeMode _youtube_mode { get; set; }
+	[Sync] private string _youtube_link { get; set; } = "";
+	[Sync] private int _youtube_volume { get; set; } = 20;
+	[Sync] private string _youtube_embed_url { get; set; } = "";
+	[Sync] private string _youtube_warning { get; set; } = "";
+	[Sync] private bool _youtube_paused { get; set; } = true;
+
+	private const float PAUSE_COOLDOWN = 1f;
+	private const float RESYNC_COOLDOWN = 1f;
+
+	private WebPanel _web_video;
+	private Panel _volume_track;
+	private bool _volume_dragging;
+	private RealTimeSince _last_pause_toggle;
+	private RealTimeSince _last_resync;
+	private bool _received_play;
+
+	private int _video_seconds;
+	private int _video_duration;
+	private int _seek_seconds;
+	private bool _seek_overridden;
+	private Panel _seek_track;
+	private bool _seek_dragging;
+	private bool _hint_hidden;
+
+	private float SeekPercent => _video_duration > 0 ? Math.Clamp( _seek_seconds / (float)_video_duration * 100f, 0f, 100f ) : 0f;
+
+	// reads the smuggled playback position/duration from the web page title each frame
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+
+		if ( IsProxy || _youtube_mode != YoutubeMode.Player ) return;
+
+		var title = _web_video?.Surface?.PageTitle;
+		if ( string.IsNullOrEmpty( title ) ) return;
+
+		var parts = title.Split( '/' );
+		if ( parts.Length != 2 ) return;
+
+		if ( int.TryParse( parts[0], out var current ) )
+			_video_seconds = current;
+		if ( int.TryParse( parts[1], out var duration ) )
+			_video_duration = duration;
+
+		if ( !_seek_overridden && !_seek_dragging && !_volume_dragging )
+			_seek_seconds = _video_seconds;
+	}
 
 	void Claim()
 	{
@@ -38,6 +165,7 @@
 
 		GameObject.Network.TakeOwnership();
 		_claimed = true;
+		ResetYoutube();
 	}
 
 	void Unclaim()
@@ -45,12 +173,176 @@
 		if ( IsProxy ) return;
 
 		_claimed = false;
+		ResetYoutube();
 		GameObject.Network.DropOwnership();
 	}
+
 	void OnStreamScreenClick()
 	{
 		if ( IsProxy ) return;
 		StreamScreen();
+	}
+
+	void OnYoutubeClick()
+	{
+		if ( IsProxy ) return;
+
+		_youtube_mode = YoutubeMode.Setup;
+		_youtube_warning = "";
+	}
+
+	void OnYoutubeLinkEdited( string value )
+	{
+		if ( IsProxy ) return;
+
+		_youtube_link = value ?? "";
+		_youtube_warning = "";
+	}
+
+	void OnVolumeDown()
+	{
+		if ( IsProxy ) return;
+
+		_volume_dragging = true;
+		SetVolumeFromCursor();
+	}
+
+	void OnVolumeDrag()
+	{
+		if ( IsProxy || !_volume_dragging ) return;
+
+		SetVolumeFromCursor();
+	}
+
+	void OnVolumeUp()
+	{
+		_volume_dragging = false;
+	}
+
+	// maps the cursor position within the track to a 0-100 volume using panel-local coords so it works on world monitors
+	private void SetVolumeFromCursor()
+	{
+		if ( _volume_track is null ) return;
+
+		var width = _volume_track.Box.Rect.Width;
+		if ( width <= 0f ) return;
+
+		var normalized = Math.Clamp( _volume_track.MousePosition.x / width, 0f, 1f );
+		_youtube_volume = Math.Clamp( (int)MathF.Round( normalized * 100f ), 0, 100 );
+	}
+
+	void OnSeekDown()
+	{
+		if ( IsProxy ) return;
+
+		_seek_dragging = true;
+		SetSeekFromCursor();
+	}
+
+	void OnSeekDrag()
+	{
+		if ( IsProxy || !_seek_dragging ) return;
+
+		SetSeekFromCursor();
+	}
+
+	void OnSeekUp()
+	{
+		_seek_dragging = false;
+	}
+
+	// maps the cursor within the track to a target time and marks the slider as manually set until the next resync
+	private void SetSeekFromCursor()
+	{
+		if ( _seek_track is null || _video_duration <= 0 ) return;
+
+		var width = _seek_track.Box.Rect.Width;
+		if ( width <= 0f ) return;
+
+		var normalized = Math.Clamp( _seek_track.MousePosition.x / width, 0f, 1f );
+		_seek_seconds = (int)MathF.Round( normalized * _video_duration );
+		_seek_overridden = true;
+	}
+
+	// hides the controls hint locally, it never needs to come back
+	void OnHideHintClick()
+	{
+		_hint_hidden = true;
+	}
+
+	// reloads the video for everyone at the chosen time and volume, like pressing play again, to resync progress
+	void OnResyncClick()
+	{
+		if ( IsProxy ) return;
+		if ( _last_resync < RESYNC_COOLDOWN ) return;
+		if ( !TryParseYoutubeVideo( _youtube_link, out var video_id, out _ ) ) return;
+
+		_last_resync = 0f;
+		PlayYoutube( BuildYoutubeEmbedUrl( video_id, _seek_seconds, _youtube_volume ) );
+	}
+
+	// formats a seconds count as m:ss
+	private static string FormatTime( int seconds )
+	{
+		if ( seconds < 0 ) seconds = 0;
+
+		return $"{seconds / 60}:{seconds % 60:D2}";
+	}
+
+	void OnPlayYoutubeClick()
+	{
+		if ( IsProxy ) return;
+
+		if ( !TryParseYoutubeVideo( _youtube_link, out var video_id, out var start_time ) )
+		{
+			_youtube_warning = "this link either isn't a youtube link or is not to a video";
+			Log.Warning( _youtube_warning );
+			return;
+		}
+
+		_hint_hidden = false;
+		PlayYoutube( BuildYoutubeEmbedUrl( video_id, start_time, _youtube_volume ) );
+	}
+
+	void OnBackFromYoutubeClick()
+	{
+		if ( IsProxy ) return;
+
+		_youtube_mode = YoutubeMode.Menu;
+		_youtube_warning = "";
+	}
+
+	void OnStopYoutubeClick()
+	{
+		if ( IsProxy ) return;
+
+		StopYoutube();
+	}
+
+	// hosts pause button toggles playback for everyone, the screen itself stays uninteractive
+	void OnTogglePauseClick()
+	{
+		if ( IsProxy ) return;
+		if ( _last_pause_toggle < PAUSE_COOLDOWN ) return;
+
+		_last_pause_toggle = 0f;
+		_youtube_paused = !_youtube_paused;
+		InjectPlaybackGesture();
+	}
+
+	// the desired state is computed once on the host then applied as an absolute value, so running on every peer is idempotent instead of cancelling out
+
+	// feeds a synthetic click into the local web surface, which toggles play/pause and satisfies the autoplay gesture requirement
+	[Rpc.Broadcast]
+	private void InjectPlaybackGesture()
+	{
+		var surface = _web_video?.Surface;
+		if ( surface is null ) return;
+
+		var center = surface.Size * 0.5f;
+		surface.TellMouseMove( center );
+		surface.TellMouseButton( MouseButtons.Left, true );
+		surface.TellMouseButton( MouseButtons.Left, false );
 	}
 
 	[Rpc.Broadcast]
@@ -59,5 +351,148 @@
 		GetComponent<ScreenDisplayPanel>( true ).Enabled = true;
 		Enabled = false;
 	}
-	protected override int BuildHash() => System.HashCode.Combine( _claimed );
+
+	[Rpc.Broadcast]
+	void PlayYoutube( string url )
+	{
+		_youtube_embed_url = url;
+		_youtube_mode = YoutubeMode.Player;
+		_youtube_warning = "";
+		_youtube_paused = true;
+		_received_play = true;
+		ResetPlaybackProgress();
+	}
+
+	[Rpc.Broadcast]
+	void StopYoutube()
+	{
+		_youtube_mode = YoutubeMode.Setup;
+		_youtube_embed_url = "";
+		_youtube_paused = true;
+		_received_play = false;
+		ResetPlaybackProgress();
+	}
+
+	private void ResetYoutube()
+	{
+		_youtube_mode = YoutubeMode.Menu;
+		_youtube_link = "";
+		_youtube_volume = 20;
+		_youtube_embed_url = "";
+		_youtube_warning = "";
+		_youtube_paused = true;
+		_received_play = false;
+		ResetPlaybackProgress();
+	}
+
+	// clears the locally tracked playback position so a fresh load starts the seek slider following live again
+	private void ResetPlaybackProgress()
+	{
+		_video_seconds = 0;
+		_video_duration = 0;
+		_seek_seconds = 0;
+		_seek_overridden = false;
+	}
+
+	private static string BuildYoutubeEmbedUrl( string video_id, int start_time, int volume )
+	{
+		return $"{YOUTUBE_EMBED_BASE_URL}?videoId={Uri.EscapeDataString( video_id )}&volume={Math.Clamp( volume, 0, 100 )}&startTime={Math.Max( 0, start_time )}";
+	}
+
+	private static bool TryParseYoutubeVideo( string link, out string video_id, out int start_time )
+	{
+		video_id = "";
+		start_time = 0;
+
+		if ( !Uri.TryCreate( link, UriKind.Absolute, out var uri ) )
+			return false;
+
+		var host = uri.Host.ToLowerInvariant();
+		if ( host.StartsWith( "www." ) )
+			host = host[4..];
+
+		if ( host == "youtu.be" )
+		{
+			video_id = uri.AbsolutePath.Trim( '/' ).Split( '/', StringSplitOptions.RemoveEmptyEntries ).FirstOrDefault() ?? "";
+		}
+		else if ( host == "youtube.com" || host == "m.youtube.com" || host == "music.youtube.com" )
+		{
+			var segments = uri.AbsolutePath.Trim( '/' ).Split( '/', StringSplitOptions.RemoveEmptyEntries );
+
+			if ( segments.Length == 0 || segments[0] == "watch" )
+				video_id = GetQueryValue( uri.Query, "v" );
+			else if ( segments.Length > 1 && (segments[0] is "embed" or "shorts" or "live") )
+				video_id = segments[1];
+		}
+
+		start_time = ParseStartTime( GetQueryValue( uri.Query, "start" ) );
+		if ( start_time <= 0 )
+			start_time = ParseStartTime( GetQueryValue( uri.Query, "t" ) );
+
+		return IsValidYoutubeVideoId( video_id );
+	}
+
+	private static bool IsValidYoutubeVideoId( string video_id )
+	{
+		if ( string.IsNullOrWhiteSpace( video_id ) || video_id.Length != 11 )
+			return false;
+
+		return video_id.All( c => char.IsLetterOrDigit( c ) || c == '_' || c == '-' );
+	}
+
+	private static string GetQueryValue( string query, string key )
+	{
+		if ( string.IsNullOrWhiteSpace( query ) )
+			return "";
+
+		foreach ( var part in query.TrimStart( '?' ).Split( '&', StringSplitOptions.RemoveEmptyEntries ) )
+		{
+			var pair = part.Split( '=', 2 );
+			var name = Uri.UnescapeDataString( pair[0].Replace( "+", " " ) );
+			if ( name != key ) continue;
+
+			return pair.Length > 1 ? Uri.UnescapeDataString( pair[1].Replace( "+", " " ) ) : "";
+		}
+
+		return "";
+	}
+
+	private static int ParseStartTime( string value )
+	{
+		if ( string.IsNullOrWhiteSpace( value ) )
+			return 0;
+
+		if ( int.TryParse( value.TrimEnd( 's' ), out var seconds ) )
+			return Math.Max( 0, seconds );
+
+		var total = 0;
+		var number = "";
+
+		foreach ( var c in value )
+		{
+			if ( char.IsDigit( c ) )
+			{
+				number += c;
+				continue;
+			}
+
+			if ( !int.TryParse( number, out var amount ) )
+				continue;
+
+			total += c switch
+			{
+				'h' => amount * 3600,
+				'm' => amount * 60,
+				's' => amount,
+				_ => 0
+			};
+			number = "";
+		}
+
+		return total;
+	}
+
+	protected override int BuildHash() => System.HashCode.Combine(
+		System.HashCode.Combine( _claimed, _youtube_mode, _youtube_link, _youtube_volume, _youtube_embed_url, _youtube_warning, _youtube_paused, _received_play ),
+		_seek_seconds, _video_duration, _hint_hidden );
 }
