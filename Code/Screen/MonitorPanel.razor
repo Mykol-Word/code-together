@@ -78,11 +78,30 @@
 			<label class="btn">claim computer</label>
 		</div>
 	}
+	else if ( _whiteboard )
+	{
+		<div class="whiteboard">
+			<div @ref="_canvas" class="canvas" onmousedown="@OnCanvasDown" onmousemove="@OnCanvasDrag" onmouseup="@OnCanvasUp" onmouseout="@OnCanvasUp"></div>
+			<div class="brush-row">
+				@for ( int i = 0; i < BRUSH_COLORS.Length; i++ )
+				{
+					var index = i;
+					<div class="swatch @(_selected_brush == index ? "selected" : "")" style="background-color: @BRUSH_COLORS[index];" onclick="@(() => SelectBrush( index ))"></div>
+				}
+			</div>
+			@if ( !IsProxy )
+			{
+				<label class="wb-sync" onclick="@OnWhiteboardSyncClick">sync</label>
+				<label class="wb-back" onclick="@OnWhiteboardBackClick">back</label>
+			}
+		</div>
+	}
 	else
 	{
 		<div class="view">
 			<label class="btn" onclick="@OnStreamScreenClick">stream screen</label>
 			<label class="btn" onclick="@OnYoutubeClick">youtube video</label>
+			<label class="btn" onclick="@OnWhiteboardClick">whiteboard</label>
 			<label class="btn danger" onclick="@Unclaim">unclaim</label>
 		</div>
 	}
@@ -106,15 +125,32 @@
 	[Sync] private string _youtube_embed_url { get; set; } = "";
 	[Sync] private string _youtube_warning { get; set; } = "";
 	[Sync] private bool _youtube_paused { get; set; } = true;
+	[Sync] private bool _whiteboard { get; set; }
 
 	private const float PAUSE_COOLDOWN = 1f;
 	private const float RESYNC_COOLDOWN = 1f;
+	private const float SYNC_COOLDOWN = 1f;
+	private const int CANVAS_WIDTH = 160;
+	private const int CANVAS_HEIGHT = 90;
+	private const int BRUSH_SIZE = 3;
+	private const int CANVAS_BYTES = CANVAS_WIDTH * CANVAS_HEIGHT * 4;
+
+	// whiteboard brush swatches: red, orange, yellow, green, blue, purple, black, eraser (white)
+	private static readonly string[] BRUSH_COLORS = new[] { "#ff3b30", "#ff9500", "#ffcc00", "#34c759", "#0a84ff", "#af52de", "#000000", "#ffffff" };
+	private static readonly Color32[] BRUSH_COLOR_VALUES = BRUSH_COLORS.Select( c => (Color32)(Color.Parse( c ) ?? Color.White) ).ToArray();
 
 	private WebPanel _web_video;
+	private Panel _canvas;
+	private Panel _painted_canvas;
+	private Texture _canvas_texture;
+	private Color32[] _canvas_pixels;
 	private Panel _volume_track;
 	private bool _volume_dragging;
+	private bool _canvas_dragging;
+	private bool _was_whiteboard;
 	private RealTimeSince _last_pause_toggle;
 	private RealTimeSince _last_resync;
+	private RealTimeSince _last_canvas_sync;
 	private bool _received_play;
 
 	private int _video_seconds;
@@ -124,6 +160,7 @@
 	private Panel _seek_track;
 	private bool _seek_dragging;
 	private bool _hint_hidden;
+	private int _selected_brush = Array.IndexOf( BRUSH_COLORS, "#000000" );
 
 	private float SeekPercent => _video_duration > 0 ? Math.Clamp( _seek_seconds / (float)_video_duration * 100f, 0f, 100f ) : 0f;
 
@@ -131,6 +168,20 @@
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
+
+		if ( _whiteboard )
+		{
+			if ( !_was_whiteboard )
+				ResetCanvasTexture();
+
+			_was_whiteboard = true;
+			EnsureCanvasTexture();
+		}
+		else
+		{
+			_was_whiteboard = false;
+			_canvas_dragging = false;
+		}
 
 		if ( IsProxy || _youtube_mode != YoutubeMode.Player ) return;
 
@@ -173,8 +224,196 @@
 		if ( IsProxy ) return;
 
 		_claimed = false;
+		_whiteboard = false;
 		ResetYoutube();
 		GameObject.Network.DropOwnership();
+	}
+
+	// owner switches this monitor into whiteboard mode for everyone
+	void OnWhiteboardClick()
+	{
+		if ( IsProxy ) return;
+
+		_whiteboard = true;
+	}
+
+	// owner exits whiteboard mode back to the menu
+	void OnWhiteboardBackClick()
+	{
+		if ( IsProxy ) return;
+
+		_whiteboard = false;
+		_canvas_dragging = false;
+	}
+
+	// selects a brush color locally, brush choice is per player
+	void SelectBrush( int index )
+	{
+		_selected_brush = index;
+	}
+
+	// starts painting on the canvas at the current cursor position
+	void OnCanvasDown()
+	{
+		if ( !_whiteboard ) return;
+
+		_canvas_dragging = true;
+		PaintCanvasAtCursor();
+	}
+
+	// continues painting while the mouse is held
+	void OnCanvasDrag()
+	{
+		if ( !_canvas_dragging ) return;
+
+		PaintCanvasAtCursor();
+	}
+
+	// stops the current local paint drag
+	void OnCanvasUp()
+	{
+		_canvas_dragging = false;
+	}
+
+	// maps the cursor to the 160x90 canvas and broadcasts the paint command
+	private void PaintCanvasAtCursor()
+	{
+		if ( _canvas is null ) return;
+		if ( !TryGetCanvasPixel( out var x, out var y ) ) return;
+
+		PaintCanvas( x, y, _selected_brush );
+	}
+
+	// returns the pixel under the cursor in the fixed canvas resolution
+	private bool TryGetCanvasPixel( out int x, out int y )
+	{
+		x = 0;
+		y = 0;
+
+		var width = _canvas.Box.Rect.Width;
+		var height = _canvas.Box.Rect.Height;
+		if ( width <= 0f || height <= 0f ) return false;
+
+		var position = _canvas.MousePosition;
+		if ( position.x < 0f || position.y < 0f || position.x >= width || position.y >= height ) return false;
+
+		x = Math.Clamp( (int)MathF.Floor( position.x / width * CANVAS_WIDTH ), 0, CANVAS_WIDTH - 1 );
+		y = Math.Clamp( (int)MathF.Floor( position.y / height * CANVAS_HEIGHT ), 0, CANVAS_HEIGHT - 1 );
+		return true;
+	}
+
+	// ensures the local UI panel is backed by the whiteboard texture
+	private void EnsureCanvasTexture()
+	{
+		if ( _canvas is null ) return;
+
+		EnsureCanvasPixels();
+
+		if ( _canvas_texture is null )
+		{
+			_canvas_texture = Texture.Create( CANVAS_WIDTH, CANVAS_HEIGHT ).Finish();
+			_canvas_texture.Update( _canvas_pixels );
+		}
+
+		if ( _painted_canvas == _canvas ) return;
+
+		_canvas.Style.SetBackgroundImage( _canvas_texture );
+		_painted_canvas = _canvas;
+	}
+
+	// ensures the local canvas pixel buffer exists
+	private void EnsureCanvasPixels()
+	{
+		if ( _canvas_pixels is not null ) return;
+
+		_canvas_pixels = new Color32[CANVAS_WIDTH * CANVAS_HEIGHT];
+		Array.Fill( _canvas_pixels, Color32.White );
+	}
+
+	// clears the local canvas so opening the whiteboard starts blank
+	private void ResetCanvasTexture()
+	{
+		_canvas_pixels = null;
+		_canvas_texture = null;
+		_painted_canvas = null;
+	}
+
+	// owner broadcasts the current canvas pixels to everyone
+	void OnWhiteboardSyncClick()
+	{
+		if ( IsProxy ) return;
+		if ( _last_canvas_sync < SYNC_COOLDOWN ) return;
+
+		_last_canvas_sync = 0f;
+		EnsureCanvasPixels();
+		SyncCanvas( BuildCanvasSnapshot() );
+	}
+
+	// broadcasts a 3x3 paint operation to every player
+	[Rpc.Broadcast( NetFlags.Unreliable )]
+	private void PaintCanvas( int x, int y, int brush_index )
+	{
+		brush_index = Math.Clamp( brush_index, 0, BRUSH_COLOR_VALUES.Length - 1 );
+		ApplyCanvasPaint( x, y, BRUSH_COLOR_VALUES[brush_index] );
+	}
+
+	// applies a 3x3 paint operation locally
+	private void ApplyCanvasPaint( int x, int y, Color32 color )
+	{
+		EnsureCanvasPixels();
+
+		var left = x - BRUSH_SIZE / 2;
+		var top = y - BRUSH_SIZE / 2;
+
+		for ( var yy = top; yy < top + BRUSH_SIZE; yy++ )
+		{
+			if ( yy < 0 || yy >= CANVAS_HEIGHT ) continue;
+
+			for ( var xx = left; xx < left + BRUSH_SIZE; xx++ )
+			{
+				if ( xx < 0 || xx >= CANVAS_WIDTH ) continue;
+
+				_canvas_pixels[yy * CANVAS_WIDTH + xx] = color;
+			}
+		}
+
+		EnsureCanvasTexture();
+		_canvas_texture?.Update( color, new Rect( left, top, BRUSH_SIZE, BRUSH_SIZE ) );
+	}
+
+	// serializes the local canvas buffer as rgba bytes
+	private byte[] BuildCanvasSnapshot()
+	{
+		var bytes = new byte[CANVAS_BYTES];
+
+		for ( var i = 0; i < _canvas_pixels.Length; i++ )
+		{
+			var offset = i * 4;
+			var color = _canvas_pixels[i];
+			bytes[offset] = color.r;
+			bytes[offset + 1] = color.g;
+			bytes[offset + 2] = color.b;
+			bytes[offset + 3] = color.a;
+		}
+
+		return bytes;
+	}
+
+	// broadcasts a full canvas snapshot to every player
+	[Rpc.Broadcast]
+	private void SyncCanvas( byte[] rgba )
+	{
+		if ( rgba is null || rgba.Length != CANVAS_BYTES ) return;
+
+		EnsureCanvasPixels();
+
+		for ( var i = 0; i < _canvas_pixels.Length; i++ )
+		{
+			var offset = i * 4;
+			_canvas_pixels[i] = new Color32( rgba[offset], rgba[offset + 1], rgba[offset + 2], rgba[offset + 3] );
+		}
+
+		_canvas_texture?.Update( _canvas_pixels );
 	}
 
 	void OnStreamScreenClick()
@@ -494,5 +733,5 @@
 
 	protected override int BuildHash() => System.HashCode.Combine(
 		System.HashCode.Combine( _claimed, _youtube_mode, _youtube_link, _youtube_volume, _youtube_embed_url, _youtube_warning, _youtube_paused, _received_play ),
-		_seek_seconds, _video_duration, _hint_hidden );
+		_seek_seconds, _video_duration, _hint_hidden, _whiteboard, _selected_brush );
 }
