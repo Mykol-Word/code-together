@@ -10978,6 +10978,14 @@
                   },
                   {
                     "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "0f5f984a-0528-4935-b4a6-e4666e68908c"
+                    },
+                    "Property": "Scale",
+                    "Value": "0.5,0.5,0.5"
+                  },
+                  {
+                    "Target": {
                       "Type": "Component",
                       "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
                     },
@@ -11047,6 +11055,14 @@
                     },
                     "Property": "Position",
                     "Value": "-11.059021,128.499496,3.76856995"
+                  },
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "0f5f984a-0528-4935-b4a6-e4666e68908c"
+                    },
+                    "Property": "Scale",
+                    "Value": "0.5,0.5,0.5"
                   },
                   {
                     "Target": {
@@ -11141,6 +11157,14 @@
                   },
                   {
                     "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "0f5f984a-0528-4935-b4a6-e4666e68908c"
+                    },
+                    "Property": "Scale",
+                    "Value": "0.5,0.5,0.5"
+                  },
+                  {
+                    "Target": {
                       "Type": "Component",
                       "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
                     },
@@ -11194,6 +11218,14 @@
                     },
                     "Property": "Position",
                     "Value": "-4.40740204,66.8071747,-14.2845612"
+                  },
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "0f5f984a-0528-4935-b4a6-e4666e68908c"
+                    },
+                    "Property": "Scale",
+                    "Value": "0.5,0.5,0.5"
                   },
                   {
                     "Target": {
@@ -12090,6 +12122,14 @@
                   },
                   {
                     "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "0f5f984a-0528-4935-b4a6-e4666e68908c"
+                    },
+                    "Property": "Scale",
+                    "Value": "0.5,0.5,0.5"
+                  },
+                  {
+                    "Target": {
                       "Type": "Component",
                       "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
                     },
@@ -12159,6 +12199,14 @@
                     },
                     "Property": "Position",
                     "Value": "-11.059021,128.499496,3.76856995"
+                  },
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "0f5f984a-0528-4935-b4a6-e4666e68908c"
+                    },
+                    "Property": "Scale",
+                    "Value": "0.5,0.5,0.5"
                   },
                   {
                     "Target": {
@@ -12253,6 +12301,14 @@
                   },
                   {
                     "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "0f5f984a-0528-4935-b4a6-e4666e68908c"
+                    },
+                    "Property": "Scale",
+                    "Value": "0.5,0.5,0.5"
+                  },
+                  {
+                    "Target": {
                       "Type": "Component",
                       "IdValue": "38dc9d9a-a83a-41d3-983b-7570ecaf772f"
                     },
@@ -12306,6 +12362,14 @@
                     },
                     "Property": "Position",
                     "Value": "-4.40740204,66.8071747,-14.2845612"
+                  },
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "0f5f984a-0528-4935-b4a6-e4666e68908c"
+                    },
+                    "Property": "Scale",
+                    "Value": "0.5,0.5,0.5"
                   },
                   {
                     "Target": {
